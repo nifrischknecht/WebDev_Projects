@@ -1,0 +1,34 @@
+.list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &__item{
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        border-top: solid 1px $color-lines;
+    }
+
+    &__checkbox{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__itemname{
+        width: 80%;
+
+        &--checked{
+            width: 80%;
+            text-decoration: line-through;
+            color: $color-text;
+        }
+    }
+
+    &--deleted{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+    }
+}

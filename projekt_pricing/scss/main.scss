@@ -1,0 +1,53 @@
+@import "partials/normalize";
+@import "partials/colors";
+@import "partials/variables";
+@import "partials/mixins";
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: hotpink;
+    color: greenyellow;
+}
+
+
+.pricing{
+    width: 70%;
+    background-color: red;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+.basic{
+    width: 1fr;
+    height: 800px;
+    background-color: green;
+    
+}
+
+.master{
+    width: 1fr;
+    height: 800px;
+    background-color: greenyellow;
+}
+
+
+.professional{
+    width: 1fr;
+    height: 800px;
+    background-color: yellow;
+}
+
+
+
+/*--  Eingabefeld (input)  --*/
+/* @import "partials/input"; */
