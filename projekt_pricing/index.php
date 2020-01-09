@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pricing-Projekt</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Pricing-Projekt | Mentor Kilian | Student Nicole</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 </head>
@@ -13,58 +14,62 @@
 <body>
 
     <header>
-        <h1>Our Pricing</h1>
+        <div class="title">
+            <h1>Our Pricing</h1>
+        </div>
+        <div class="toggle">  <!-- Hier startet der Toggle (Annually/Monthly) -->
+            <p class="toggle__pricing">Annually</p>
+            <label class="checkbox">
+                <input type="checkbox">
+                <div class="button"></div>
+            </label>
+            <p class="toggle__pricing">Monthly</p>
+        </div>
     </header>
 
     <main>
+        <div class="offer">
+            <div class="offer__basic"> <!-- Hier startet das Angebot «Basic» -->
+                <h2 class="offer__title">Basic<h2>
+                <p class="offer__dollar">&dollar;<p class="offer__price">19.99</p>
+                <ul class="offer__services">
+                    <li>500 GB Storage</li>
+                    <li>2 Users Allowed</li>
+                    <li>Send up to 3 GB</li>
+                </ul>
+                <button class="offer_btn">LEARN MORE</button>
+            </div>
+
+            <div class="offer__professional--negative"> <!-- Hier startet das Angebot «Professional» -->
+                <h2 class="offer__title--negative">Professional<h2>
+                <p class="offer__dollar--negative">&dollar;<p class="offer__price--negative">19.99</p>
+                <ul class="offer__services--negative">
+                    <li>1 TB Storage</li>
+                    <li>5 Users Allowed</li>
+                    <li>Send up to 10 GB</li>
+                </ul>
+                <button class="offer_btn--negative">LEARN MORE</button>
+            </div>
+
+            <div class="offer__master"> <!-- Hier startet das Angebot «Master» -->
+                <h2 class="offer__title">Master<h2>
+                <p class="offer__dollar">&dollar;<p class="offer__price">19.99</p>
+                <ul class="offer__services">
+                    <li>2 TB Storage</li>
+                    <li>10 Users Allowed</li>
+                    <li>Send up to 20 GB</li>
+                </ul>
+                <button class="offer_btn">LEARN MORE</button>
+            </div>
+        </div>
     </main>
 
-Hier kommt Bodytext rein.
+    <footer>
+        <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Kilian</a>. 
+        Coded by <a href="#">Nicole</a>.
+        </div>
+    </footer>
 
 </body>
 </html>
-
-
-<!--
-
-    <div class="button">
-    Annually
-    Monthly
-    </div>
-
-
-    <div class="pricing">
-
-        <div class="basic">
-            Basic
-            &dollar;19.99
-            &dollar;199.99
-            500 GB Storage
-            2 Users Allowed
-            Send up to 3 GB
-            Learn More
-        </div>
-
-        <div class="professional">
-        Professional
-        &dollar;24.99
-        &dollar;249.99
-        1 TB Storage
-        5 Users Allowed
-        Send up to 10 GB
-        Learn More
-        </div>
-
-        <div class="master">
-        Master
-        &dollar;39.99
-        &dollar;399.99
-        2 TB Storage
-        10 Users Allowed
-        Send up to 20 GB
-        Learn More
-        </div>
-        
-    </div>
-
--->
