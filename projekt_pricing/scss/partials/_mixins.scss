@@ -1,11 +1,22 @@
-/* Hier kommen Mixins rein
-   ==========================================================================
+/*  Alle Mixins zum Projekt Pricing
+    ===================================  */
 
 
-    <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+/*---   Screens   ---*/
+
+/* Mobile */
+
+@mixin mobile{
+  @media (min-width: 375px){
+    @content;
+  }
+}
 
 
-   */
+/* Desktop */
+
+@mixin desktop{
+  @media (min-width: 1440px){
+    @content;
+  }
+}
