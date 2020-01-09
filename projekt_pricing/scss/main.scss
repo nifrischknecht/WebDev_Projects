@@ -1,7 +1,7 @@
 @import "partials/normalize";
-@import "partials/colors";
 @import "partials/variables";
 @import "partials/mixins";
+
 
 *,
 *:before,
@@ -13,9 +13,27 @@
 body{
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    background-color: red;
-    color: yellow;
+    background-color: yellowgreen;
+    color: black;
 }
+
+
+/*--  Header-Bereich  --*/
+@import "partials/header";
+
+
+/*--  Angebote(Offers)-Bereich  --*/
+@import "partials/offers";
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); }
+
 
 /*--
 .pricing{
