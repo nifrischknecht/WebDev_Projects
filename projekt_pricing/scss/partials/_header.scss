@@ -3,13 +3,21 @@
 
 
 header{
-    background-color: greenyellow;
-    height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 4rem 0 4rem 0;
 }
 
 h1{
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
+}
+
+.toggle{
+    display: flex;
+    justify-content: center;
+    &__checkbox{
+        margin: 0 2rem 0 2rem;
+    }
+
 }
