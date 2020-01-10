@@ -9,26 +9,63 @@
     box-sizing: border-box;
 }
 
-
-body{
+html{
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    background-color: yellowgreen;
-    color: black;
+    text-align: center;
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+    color: $Blue-normal;
+    background-color: $Blue-lightest;
+    background-image: url('../images/bg-top.svg');
+    background-repeat: no-repeat;
+    background-position: 15rem -2rem;
+
+    @include desktop{
+        background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
+        background-position: top right, bottom left;
+    }
+}
+
+h1{
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 
 /*--  Header-Bereich  --*/
 @import "partials/header";
 
-
 /*--  Angebote(Offers)-Bereich  --*/
 @import "partials/offers";
 
+footer{
+    height: 10vh;
+    background-color: greenyellow;
+}
 
 .attribution {
     font-size: 11px;
-    text-align: center;
+    padding-bottom: 2rem;
 }
 
 .attribution a {
@@ -66,15 +103,3 @@ body{
 }
 
 --*/
-
-
-
-
-
-
-
-
-
-
-/*--  Eingabefeld (input)  --*/
-/* @import "partials/input"; */
