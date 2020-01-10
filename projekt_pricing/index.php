@@ -19,7 +19,7 @@
         </div>
         <div class="toggle">  <!-- Hier startet der Toggle (Annually/Monthly) -->
             <p class="toggle__pricing">Annually</p>
-            <label class="checkbox">
+            <label class="toggle__checkbox">
                 <input type="checkbox">
                 <div class="button"></div>
             </label>
@@ -42,7 +42,7 @@
 
             <div class="offer--negative"> <!-- Hier startet das Angebot «Professional» -->
                 <h2 class="offer__title--negative">Professional<h2>
-                <p class="offer__dollar--negative">&dollar;<p class="offer__price--negative">19.99</p>
+                <p class="offer__dollar--negative">&dollar;<p class="offer__price--negative">24.99</p>
                 <ul class="offer__services--negative">
                     <li>1 TB Storage</li>
                     <li>5 Users Allowed</li>
@@ -53,7 +53,7 @@
 
             <div class="offer"> <!-- Hier startet das Angebot «Master» -->
                 <h2 class="offer__title">Master<h2>
-                <p class="offer__dollar">&dollar;<p class="offer__price">19.99</p>
+                <p class="offer__dollar">&dollar;<p class="offer__price">39.99</p>
                 <ul class="offer__services">
                     <li>2 TB Storage</li>
                     <li>10 Users Allowed</li>
