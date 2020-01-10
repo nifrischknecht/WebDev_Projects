@@ -31,7 +31,7 @@
         <div class="pricing__offers"> <!-- Hier starten alle Angebote (Offers) -->
             <div class="offer"> <!-- Hier startet das Angebot «Basic» -->
                 <h2 class="offer__title">Basic<h2>
-                <p class="offer__dollar">&dollar;<span class="offer__price">19.99</span>
+                <p class="offer__dollar">&dollar;<span class="offer__price">19.99</span></p>
                 <ul class="offer__services">
                     <li>500 GB Storage</li>
                     <li>2 Users Allowed</li>
@@ -41,9 +41,9 @@
             </div>
 
             <div class="offer--negative"> <!-- Hier startet das Angebot «Professional» -->
-                <h2 class="offer__title--negative">Professional<h2>
-                <p class="offer__dollar--negative">&dollar;<p class="offer__price--negative">24.99</p>
-                <ul class="offer__services--negative">
+                <h2 class="offer__title">Professional<h2>
+                <p class="offer__dollar">&dollar;<span class="offer__price">24.99</span></p>
+                <ul class="offer__services">
                     <li>1 TB Storage</li>
                     <li>5 Users Allowed</li>
                     <li>Send up to 10 GB</li>
@@ -53,7 +53,7 @@
 
             <div class="offer"> <!-- Hier startet das Angebot «Master» -->
                 <h2 class="offer__title">Master<h2>
-                <p class="offer__dollar">&dollar;<p class="offer__price">39.99</p>
+                <p class="offer__dollar">&dollar;<span class="offer__price">39.99</span></p>
                 <ul class="offer__services">
                     <li>2 TB Storage</li>
                     <li>10 Users Allowed</li>
