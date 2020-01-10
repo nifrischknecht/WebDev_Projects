@@ -22,7 +22,7 @@ body{
     background-color: $Blue-lightest;
     background-image: url('../images/bg-top.svg');
     background-repeat: no-repeat;
-    background-position: 15rem -2rem;
+    background-position: 15rem -3rem;
 
     @include desktop{
         background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
@@ -33,17 +33,14 @@ body{
 h1{
     font-size: 2rem;
     margin: 0;
-    padding: 0;
 }
 
 h2{
     margin: 0;
-    padding: 0;
 }
 
 p{
     margin: 0;
-    padding: 0;
 }
 
 ul{
@@ -55,13 +52,13 @@ ul{
 /*--  Header-Bereich  --*/
 @import "partials/header";
 
+main{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
 /*--  Angebote(Offers)-Bereich  --*/
 @import "partials/offers";
-
-footer{
-    height: 10vh;
-    background-color: greenyellow;
-}
 
 .attribution {
     font-size: 11px;
@@ -69,37 +66,5 @@ footer{
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%); }
-
-
-/*--
-.pricing{
-    width: 70%;
-    background-color: red;
-    display: flex;
-    justify-content: flex-end;
-
+    color: hsl(228, 45%, 44%);
 }
-
-
-.basic{
-    width: 1fr;
-    height: 800px;
-    background-color: green;
-    
-}
-
-.master{
-    width: 1fr;
-    height: 800px;
-    background-color: greenyellow;
-}
-
-
-.professional{
-    width: 1fr;
-    height: 800px;
-    background-color: yellow;
-}
-
---*/
