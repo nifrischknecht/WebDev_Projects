@@ -1,7 +1,52 @@
 /*  Alles CSS im Bereich «Offers» zum Projekt Pricing
     ==================================================  */
 
+    @import "partials/variables";
+    @import "partials/mixins";
 
-/*---   ???????   ---*/
 
-/* ????????? */
+.pricing__offers{
+    @include desktop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.offer{
+    background-color: white;
+
+    &__title{
+        font-size: 1.2rem;
+        &--negative{
+            font-size: 1.2rem;
+        }
+    }
+
+    &__dollar{
+        font-size: 2rem;
+        &--negative{
+            font-size: 2rem;
+        }
+    }
+
+    &__price{
+        font-size: 4rem;
+        &--negative{
+            font-size: 4rem;
+        }
+    }
+
+    &__btn{
+        background-image: linear-gradient($Purple-light, $Purple-dark);
+        color: $Purple-dark;
+        &--negative{
+            color: white;
+        }
+    }
+
+    &--negative{
+        background-image: linear-gradient(to bottom, $Purple-light, $Purple-dark);
+        color: white;
+    }
+}

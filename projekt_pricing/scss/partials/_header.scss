@@ -2,6 +2,14 @@
     ================================================  */
 
 
-/*---   ????????   ---*/
+header{
+    background-color: greenyellow;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-/* ????? */
+h1{
+    padding-bottom: 2rem;
+}
