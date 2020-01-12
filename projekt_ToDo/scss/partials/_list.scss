@@ -8,27 +8,50 @@
         display: flex;
         align-items: center;
         border-top: solid 1px $color-lines;
+        &:hover>.list--deleted{
+            display: flex;
+        }
+
+        &--checked {
+            .list__itemname {
+                text-decoration: line-through;
+                color: $color-text;         
+            }
+        }
+
     }
 
     &__checkbox{
         width: 10%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        img{
+            width: 2.7rem;
+        }
+
+        &-icon {
+            content: url(../images/unchecked.svg);
+        }
+
+        input[type="checkbox"]:checked + .list__checkbox-icon {
+            content: url(../images/checked.svg);
+        }
     }
 
     &__itemname{
         width: 80%;
-
-        &--checked{
-            width: 80%;
-            text-decoration: line-through;
-            color: $color-text;
-        }
     }
 
     &--deleted{
         width: 10%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        img{
+            width: 1.5rem;
+        }
+        display: none;
     }
+
 }
