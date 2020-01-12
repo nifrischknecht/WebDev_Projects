@@ -28,7 +28,7 @@
     </header>
 
     <main>
-        <div class="pricing__offers"> <!-- Hier starten alle Angebote (Offers) -->
+        <div class="offer-wrapper"> <!-- Hier starten alle Angebote (Offers) -->
             <div class="offer"> <!-- Hier startet das Angebot «Basic» -->
                 <h2 class="offer__title">Basic<h2>
                 <p class="offer__dollar">&dollar;<span class="offer__price">19.99</span></p>
@@ -40,7 +40,7 @@
                 <button class="offer_btn">LEARN MORE</button>
             </div>
 
-            <div class="offer--negative"> <!-- Hier startet das Angebot «Professional» -->
+            <div class="offer offer--negative"> <!-- Hier startet das Angebot «Professional» -->
                 <h2 class="offer__title">Professional<h2>
                 <p class="offer__dollar">&dollar;<span class="offer__price">24.99</span></p>
                 <ul class="offer__services">
@@ -48,7 +48,7 @@
                     <li>5 Users Allowed</li>
                     <li>Send up to 10 GB</li>
                 </ul>
-                <button class="offer_btn--negative">LEARN MORE</button>
+                <button class="offer_btn">LEARN MORE</button>
             </div>
 
             <div class="offer"> <!-- Hier startet das Angebot «Master» -->

@@ -5,7 +5,7 @@
     @import "partials/mixins";
 
 
-.pricing__offers{
+.offer-wrapper{
     @include desktop{
         display: flex;
         justify-content: center;
@@ -40,7 +40,6 @@
         margin: 0 0 0 0.5rem;
     }
 
-
     &__services{
         margin: 0;
         padding: 0;
@@ -50,18 +49,10 @@
     &__btn{
         background-image: linear-gradient($Purple-light, $Purple-dark);
         color: $Purple-dark;
-        &--negative{
-            color: white;
-        }
     }
 
-    &--negative{
+    &offer--negative{
         background-image: linear-gradient(to bottom, $Purple-light, $Purple-dark);
         color: white;
-        width: 90%;
-        margin: 0 auto 2rem auto;
-        padding: 2rem;
-        border-radius: 1rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
     }
+}
