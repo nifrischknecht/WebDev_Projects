@@ -19,7 +19,7 @@
         <div class="todos">
             <div class="input">
                 <div class="input__arrow">
-                    <img src="images/arrow-down.svg" width="20">
+                    <img src="images/arrow-down.svg">
                 </div>
                 <form class="input__textbox">
                     <input class=input__textfield type="text" placeholder="What needs to be done?">
@@ -28,50 +28,51 @@
 
             <ul class="list">
                 <li class="list__item list__item--checked">
-                    <div class="list__checkbox">
-                        <img src="images/checked.svg" width="40">
-                    </div>
-                    <div class="list__itemname--checked">
+                    <label class="list__checkbox">
+                        <input type="checkbox">
+                        <span class="list__checkbox-icon"></span>
+                    </label>
+                    <div class="list__itemname">
                         Milch
                     </div>
                     <div class="list--deleted">
-                        <img src="images/cross.svg" width="20">
+                        <img src="images/cross.svg">
                     </div>
                 </li>
 
-                <li class="list__item list__item--unchecked">
+                <li class="list__item">
                     <div class="list__checkbox">
-                        <img src="images/unchecked.svg" width="40">
+                        <img src="images/unchecked.svg">
                     </div>
                     <div class="list__itemname">
                         Wasser
                     </div>
                     <div class="list--deleted">
-                        <img src="images/cross.svg" width="20">
+                        <img src="images/cross.svg">
                     </div>
                 </li>
 
-                <li class="list__item list__item--unchecked">
+                <li class="list__item">
                     <div class="list__checkbox">
-                        <img src="images/unchecked.svg" width="40">
+                        <img src="images/unchecked.svg">
                     </div>
                     <div class="list__itemname">
                         Mehl
                     </div>
                     <div class="list--deleted">
-                        <img src="images/cross.svg" width="20">
+                        <img src="images/cross.svg">
                     </div>
                 </li>
 
                 <li class="list__item list__item--unchecked">
                     <div class="list__checkbox">
-                        <img src="images/unchecked.svg" width="40">
+                        <img src="images/unchecked.svg">
                     </div>
                     <div class="list__itemname">
                         Orangensaft
                     </div>
                     <div class="list--deleted">
-                        <img src="images/cross.svg" width="20">
+                        <img src="images/cross.svg">
                     </div>
                 </li>
             </ul>
