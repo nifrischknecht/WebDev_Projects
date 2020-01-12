@@ -35,43 +35,46 @@
                     <div class="list__itemname">
                         Milch
                     </div>
-                    <div class="list--deleted">
+                    <div class="list__delete">
                         <img src="images/cross.svg">
                     </div>
                 </li>
 
                 <li class="list__item">
-                    <div class="list__checkbox">
-                        <img src="images/unchecked.svg">
-                    </div>
+                    <label class="list__checkbox">
+                        <input type="checkbox">
+                        <span class="list__checkbox-icon"></span>
+                    </label>
                     <div class="list__itemname">
                         Wasser
                     </div>
-                    <div class="list--deleted">
+                    <div class="list__delete">
                         <img src="images/cross.svg">
                     </div>
                 </li>
 
                 <li class="list__item">
-                    <div class="list__checkbox">
-                        <img src="images/unchecked.svg">
-                    </div>
+                    <label class="list__checkbox">
+                        <input type="checkbox">
+                        <span class="list__checkbox-icon"></span>
+                    </label>
                     <div class="list__itemname">
                         Mehl
                     </div>
-                    <div class="list--deleted">
+                    <div class="list__delete">
                         <img src="images/cross.svg">
                     </div>
                 </li>
 
-                <li class="list__item list__item--unchecked">
-                    <div class="list__checkbox">
-                        <img src="images/unchecked.svg">
-                    </div>
+                <li class="list__item">
+                    <label class="list__checkbox">
+                        <input type="checkbox">
+                        <span class="list__checkbox-icon"></span>
+                    </label>
                     <div class="list__itemname">
                         Orangensaft
                     </div>
-                    <div class="list--deleted">
+                    <div class="list__delete">
                         <img src="images/cross.svg">
                     </div>
                 </li>
