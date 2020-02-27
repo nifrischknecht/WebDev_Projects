@@ -18,47 +18,45 @@
     <main>
         <div class="todos">
             <div class="input">
-                <div class="input__arrow">
-                    <img src="images/arrow-down.svg">
-                </div>
-                <form class="input__textbox">
-                    <input class=input__textfield type="text" placeholder="What needs to be done?">
+                <form class="input__line">
+                    <input class="input__arrow" type="submit" value=" ">
+                    <input class="input__textfield" type="text" placeholder="What needs to be done?" >
                 </form>
             </div>
 
             <ul class="list">
-                <li class="list__item list__item--checked">
-                    <label class="list__checkbox">
-                        <input type="checkbox">
-                        <span class="list__checkbox-icon"></span>
-                    </label>
-                    <div class="list__itemname">
+                <li class="list__item">
+                    <div class="list__checkbox list__item--checked">
+                        <input type="checkbox" class= "list__checkmark" id="milch">
+                        <label class="list__label" for="Milch"></label>
+                    </div>
+                    <div class="list__item-name">
                         Milch
                     </div>
                     <div class="list__delete">
-                        <img src="images/cross.svg">
+                        <img src="images/cross.svg" alt="button to delete">
                     </div>
                 </li>
 
                 <li class="list__item">
-                    <label class="list__checkbox">
-                        <input type="checkbox">
-                        <span class="list__checkbox-icon"></span>
-                    </label>
-                    <div class="list__itemname">
+                    <div class="list__checkbox">
+                        <input type="checkbox" class= "list__checkmark" id="wasser">
+                        <label class="list__label" for="Wasser"></label>
+                    </div>
+                    <div class="list__item-name">
                         Wasser
                     </div>
                     <div class="list__delete">
-                        <img src="images/cross.svg">
+                        <img src="images/cross.svg" alt="button to delete">
                     </div>
                 </li>
 
                 <li class="list__item">
-                    <label class="list__checkbox">
-                        <input type="checkbox">
-                        <span class="list__checkbox-icon"></span>
-                    </label>
-                    <div class="list__itemname">
+                   <div class="list__checkbox">
+                        <input type="checkbox" class= "list__checkmark" id="mehl">
+                        <label class="list__label" for="Mehl"></label>
+                    </div>
+                    <div class="list__item-name">
                         Mehl
                     </div>
                     <div class="list__delete">
@@ -67,15 +65,15 @@
                 </li>
 
                 <li class="list__item">
-                    <label class="list__checkbox">
-                        <input type="checkbox">
-                        <span class="list__checkbox-icon"></span>
-                    </label>
-                    <div class="list__itemname">
+                    <div class="list__checkbox">
+                        <input type="checkbox" class= "list__checkmark" id="orangensaft">
+                        <label class="list__label" for="Orangensaft"></label>
+                    </div>
+                    <div class="list__item-name">
                         Orangensaft
                     </div>
                     <div class="list__delete">
-                        <img src="images/cross.svg">
+                        <img src="images/cross.svg" alt="button to delete">
                     </div>
                 </li>
             </ul>
@@ -85,6 +83,6 @@
             </div>
         </div>
     </main>
-
+    <script src="js/main.js"></script>
 </body>
 </html>

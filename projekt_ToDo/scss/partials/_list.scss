@@ -8,42 +8,45 @@
         display: flex;
         align-items: center;
         border-top: solid 1px $color-lines;
+
         &:hover>.list__delete{
             display: flex;
-        }
+            }
 
         &--checked {
-            .list__itemname {
-                text-decoration: line-through;
-                color: $color-text;
+            text-decoration: line-through;
+            color: $color-text;
             }
         }
-    }
+
 
     &__checkbox{
         width: 10%;
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
-            width: 2.7rem;
-        }
-        &-icon { /*Sofern nichts angekreuzt ist, erschein das leere Icon (grauer Kreis)*/
-            width: 2.7rem;
-            height: 2.7rem;
-            background-image: url(../images/unchecked.svg);
+
+        input{
+            display: none;
         }
     }
 
-    &__checkbox input{
-        display: none;  /*Hier wird das automatische Checkboxfeld ausgeblendet*/
-
-        &:checked + .list__checkbox-icon{  /*Sobald das Checkboxfeld angekreuzt wird, erschein das Häckchen*/
-            background-image: url(../images/checked.svg);
-        }
+    &__label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    &__itemname{
+    &__checkmark + .list__label::before{
+        content: url(../images/unchecked.svg);
+        width: 2.7rem;
+        height: 2.7rem;
+    }
+    &__checkmark:checked + .list__label::before{
+        content: url(../images/checked.svg);
+    }
+
+    &__item-name{
         width: 80%;
     }
 
@@ -52,10 +55,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        display: none;   /*Das rote Kreuz wird nur angezeigt, wenn man mit dem Curser auf der Zeile ist (hover).*/
         img{
             width: 1.5rem;
         }
-        display: none;   /*Das rote Kreuz wird nur angezeigt, wenn man mit dem Curser auf der Zeile ist (hover).*/
     }
-
 }
