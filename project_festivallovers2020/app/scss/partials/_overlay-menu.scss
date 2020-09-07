@@ -1,0 +1,364 @@
+/*--  Boxes arround header and menu  --*/
+
+.menuOverlay-outside {
+    display: none;
+
+    &--active {
+        display: block;
+    }
+}
+
+.menuOverlay-inside {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*--  Header-Part: header in black  --*/
+
+.headerBlack {
+    background-color: $grey-90;  //desktop2
+    width: 100%;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    z-index: 500;
+}
+
+.box-close {
+    height: 64px;
+    width: 100%;
+    padding-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    
+@include media('M') {
+    padding-left: 24px;
+}
+
+@include media('L') {
+    max-width: 1600px;
+    padding-left: 32px;
+}}
+
+
+// Menü > Hamburger-close-Button: to close the menu overlay
+
+.menu-close {
+
+    &__cross { 
+    height: 64px;
+    cursor: pointer;
+    border-style: none;
+    appearance: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    }
+
+    &__icon {
+        pointer-events: none;
+        height: 64px;
+        width: 24px;
+        background-image: url("../img/navigation_menu-close_white.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24px;
+    }
+
+    p {
+        pointer-events: none;
+        font-family:'ProximaNova_Bold', Arial, sans-serif;
+        font-size: 17px;
+        color: $white;
+        padding-left: 12px;
+    }
+}
+
+
+// Logo FestivalLovers
+
+.logo-close {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        background-image: url("../img/festivallovers-heart_white.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        width: 27px;
+        height: 27px;
+
+    @include media('M') {
+        background-image: url("../img/festivallovers_white.svg");
+        width: 184.8px;
+        height: 27px;
+    }}
+}
+
+
+// Login- and Ticket-Button
+
+.actions-close {
+    display: flex;
+    justify-content: flex-end;
+
+    &__btn {
+        height: 64px;
+        width: 64px;
+        border-style: none;
+        background-color: transparent;
+        appearance: none;
+        border-left: 1px solid $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            display: none;
+    
+        @include media('L') {
+            display: block;
+            pointer-events: none;
+            font-family:'ProximaNova_Bold', Arial, sans-serif;
+            color: $white;
+            padding-left: 12px;
+        }
+    }
+   
+    @include media('L') {
+        width: auto;
+        padding-right: 32px;
+        padding-left: 32px;
+
+        &:hover p {
+            color: $black;
+        }
+    }}
+
+    &__icon {
+        pointer-events: none;
+        height: 64px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+
+    @include media('L') {
+            padding-right: 0px;
+    }}
+
+    &__login {
+        cursor: pointer;
+
+        &-icon {
+            background-image: url("../img/navigation_login_white.svg");
+        }
+
+        &--active {
+            background-color: $white;
+
+            .actions-close__login-icon {
+            background-image: url("../img/navigation_login_black.svg");
+            }
+
+            p {
+                color: $black;
+                }
+        }
+    }
+
+    &__tickets-icon {
+        background-image: url("../img/navigation_tickets_white.svg");
+    }
+
+    &__btn:hover {
+        background: $white;
+    }
+
+    &__btn:hover &__login-icon {
+        background-image: url("../img/navigation_login_black.svg");
+    }
+
+    &__btn:hover &__tickets-icon {
+        background-image: url("../img/navigation_tickets_black.svg");
+    }
+}
+
+
+/*--  Menu-Part: navigaton, searchfiel and socialmedia  --*/
+
+.menuOverlay{
+
+    &__items {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 10;
+        background-color: rgba($black, 0.8);
+        padding-top: 144px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    @include media('M') {
+        padding-top: 184px;
+    }
+
+    @include media('L') {
+        padding-top: 224px;
+    }
+
+    @include media('XL') {
+        border-left: 1px solid $white;
+        border-right: 1px solid $white;
+    }}
+
+    &__items {
+
+        nav {
+
+            ul {
+                margin-top: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            li {
+                width: 100%;
+                height: 80px;
+                font-family:'Adelle_Bold', serif;
+                font-size: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            @include media('M') {
+                height: 100px;
+                font-size: 48px;
+            }
+        
+            @include media('L') {
+                height: 120px;
+                font-size: 56px;
+            }
+                
+                a {
+                    color: $white;
+                }
+            }
+
+            li:hover {
+                cursor: pointer;
+                background-color: $white;
+            }
+
+            li:hover a {
+                color: $black;
+            }
+        }
+    }
+}
+
+.activities {
+    width: 100%;
+
+@include media('L') {
+    display: flex;
+    padding: 60px 0px 60px 0px;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+}}
+
+.search {
+    width: 100%;
+    padding: 0px 16px 0px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+@include media('L') {
+    padding: 0px;
+    width: auto;
+
+}
+
+    &__form {
+        width: 343px;
+        border-bottom: 1px solid $white;
+        display: flex;
+        justify-content: space-between;
+        background-color: transparent;
+
+        input {
+            border-style: none;
+            width: 100%;
+            background-color: transparent;
+        }
+    }
+
+    &_btn {
+        cursor: pointer;
+
+        height: 45px;
+        width: 64px;
+        border-style: none;
+        background-color: transparent;
+        background-image: url("../img/navigation_menu-search_white.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 32px;
+    }
+}
+
+.socialmedia {
+    width: 100%;
+    padding: 60px 0px 60px 0px;
+    display: flex;
+    justify-content: center;
+
+@include media('L') {
+    width: 343px;
+    padding: 0px;
+}
+
+    &__btn {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        height: 32px;
+        width: 32px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin: 0px 16px 0px 16px;
+    }
+
+    &__fb-icon {
+        background-image: url("../img/socialmedia_facebook_white.svg");
+    }
+
+    &__insta-icon {
+        background-image: url("../img/socialmedia_instagram_white.svg");
+    }
+
+    &__snapchat-icon {
+        background-image: url("../img/socialmedia_snapchat_white.svg");
+    }
+
+    &__youtube-icon {
+        background-image: url("../img/socialmedia_youtube_white.svg");
+    }
+
+    &__twitter-icon {
+        background-image: url("../img/socialmedia_twitter_white.svg");
+    }
+}

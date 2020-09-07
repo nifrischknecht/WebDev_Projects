@@ -1,0 +1,11 @@
+#Dies sind alles Dateien zum ignorieren#
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+dist
+app/dev
+node_modules

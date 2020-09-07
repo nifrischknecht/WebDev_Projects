@@ -1,0 +1,274 @@
+.wrapper-payment {
+    height: 100vh;
+    width: 100%;
+
+@include media('L') {
+    max-width: 1600px;
+}}
+
+.paymentarea {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__payment {
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        color: $white;
+        margin: 24px 0px 16px 0px;
+        padding: 0px 16px 0px 16px;
+        text-align: center;
+
+    @include media('M') {
+        margin: 100px 0px 32px 0px;
+    }
+
+    @include media('L') {
+        margin: 130px 0px 40px 0px;
+    }}
+
+    &__footer {
+        height: 40px;
+        width: 100%;
+        margin-bottom: 24px;
+
+        &-icon {
+            height: 40px;
+            width: 100%;
+            background-image: url("../img/music_indie_white.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 40px;
+        }
+    }
+
+    &__finished {
+
+        h2 {
+            margin-top: 50px;
+        }
+
+        @include media('M') {
+            margin-top: 100px;
+        }
+
+        @include media('L') {
+            margin-top: 150px;
+        }
+
+        .lead {
+            color: $white;
+            margin-top: 5px;
+            margin-bottom: 40px;
+            padding: 0px 16px 0px 16px;
+            text-align: center;
+
+        }
+    }
+}
+
+.btnsFinished {
+    width: 100%;
+
+    &__dashboard {
+        margin-bottom: 16px;
+
+        button {
+            background: $white;
+            color: $black;
+        }
+
+        button:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+
+    &__app {
+        
+        button {
+            background: transparent;
+            color: $white;
+            border: 2px solid $white;
+        }
+
+        button:hover {
+            background-color: $white;
+            color: $black;
+            border: 2px solid $white;
+        }
+    }
+
+@include media('M') {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__dashboard {
+        margin: 0px 8px 0px 8px;
+        padding: 0px;
+        order: 2;
+    }
+
+    &__app {
+        margin: 0px 8px 0px 8px;
+        padding: 0px;
+        order: 1;
+    }
+}}
+
+// Loginfield starts here
+.payment {
+    background-color: $white;
+    width: 310px;
+    height: 465px;
+    padding: 0px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__payoptions {
+        width: 100%;
+        height: 48px;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            cursor: pointer;
+            height: 48px;
+            margin-right: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-style: none;
+            border-radius: 5px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            img {
+                width: 70%;
+                object-fit: cover;
+            }
+        }
+
+        button:focus {
+            border: 1px solid $black;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        padding: 0px 24px 24px 24px;
+    }
+
+    &__formular {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__fields {
+        width: 100%;
+        margin-bottom: 16px;
+
+        input {
+            width: 100%;
+            min-width: 50%;
+            height: 48px;
+            background-color: $grey-F0;
+            border-style: none;
+            padding-left: 16px;
+        }
+
+        input::placeholder {
+            color: $grey-C2;
+        }
+    }
+
+    &__form-input {
+        margin-bottom: 24px;
+        display: flex;
+        position: relative;
+
+        input:nth-child(2) {
+                border-right: 1px solid $grey-C2;
+                padding-right: 50px;
+        }
+
+        button {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            background-color: $grey-F0;
+            height: 48px;
+            width: 48px;
+            padding-right: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-style: none;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    &__payBtn {
+        height: 48px;
+        width: 100%;
+        margin-top: 16px;
+        padding: 0px 28px 0px 28px;
+        font-family:'ProximaNova_Bold', Arial, sans-serif;
+        border-style: none;
+        background-color: $black;
+        color: $white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &-icon {
+            height: 48px;
+            width: 14px;
+            background-image: url("../img/payment_security_white.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        &-icon-ok {
+            height: 48px;
+            width: 22px;
+            background-image: url("../img/payment_checked_white.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        &-2 {
+            background-color: $indie-dark;
+        }
+    }
+
+    &__payBtn:hover {
+        background-color: $indie-dark;
+    }
+
+}

@@ -1,0 +1,324 @@
+.ticketBox {
+    padding: 0px 16px 90px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+@include media('M') {
+    padding: 0px 24px 90px 24px;
+}
+
+@include media('L') {
+    padding: 0px 120px 90px 120px;
+}
+
+    h2 {
+        margin-top: 36px;
+        margin-bottom: 18px;
+    }
+}
+
+
+// OVERVIEW: all tickets from one festival
+.ticketOverview {
+    background-color: $grey-F0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 42px 16px 78px 16px;
+
+@include media('M') {
+    padding: 75px 24px 120px 24px;
+}
+
+@include media('L') {
+    padding: 75px 120px 150px 120px;
+}
+
+    &__coordinates {
+        margin-bottom: 75px;
+
+    @include media('M') {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+        &-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 26px;
+                height: 30px;
+            }
+
+            p {
+                margin-left: 12px;
+            }
+        }
+
+        &-location {
+            margin-bottom: 24px;
+
+        @include media('M') {
+            margin-bottom: 0px;
+            margin-right: 40px;
+        }}
+    }
+
+    h3 {
+        margin-bottom: 36px;
+
+    @include media('M') {
+        margin-bottom: 45px;
+    }
+
+    @include media('L') {
+        margin-bottom: 55px;
+    }}
+
+    &__festivalentries {
+
+    @include media('L+') {
+        align-self: flex-start;
+    }}
+
+    &__camping {
+        margin-top: 160px;
+
+    @include media('L+') {
+        align-self: flex-start;
+    }}
+}
+
+
+// TICKETENTRIES: all tickets for festival
+.festivalentries {
+    width: 100%;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(1, 1fr);
+
+    @include media('M') {
+        grid-gap: 32px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('L+') {
+        grid-gap: 16px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media('L++') {
+        grid-gap: 16px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__box {
+        background-color: $white;
+        width: 100%;
+        height: 384px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    @include media('M') {
+        margin-bottom: 32px;
+    }
+
+        &--sold-out {
+
+            .festivalentries__box-quantity-text {
+
+                    p {
+                        color: $grey-C2;
+                    }
+            }
+
+            .festivalentries__box-info {
+                background-color: $grey-C2;
+            }
+
+
+            .festivalentries__box-tickets {
+    
+                &-counter {
+                    border: 2px solid $grey-C2;
+                }
+
+                .minusBtn {
+                    background-image: url("../img/tickets_minus_greyC2.svg");
+                }
+    
+                .plusBtn {
+                    background-image: url("../img/tickets_plus_greyC2.svg");
+                }
+    
+                p {
+                    color: $grey-C2;
+                }
+            }
+        }
+
+        &-info {
+            width: 100%;
+            height: 224px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 56px;
+                object-fit: cover;
+            }
+
+            h3 {
+                color: $white;
+                margin-top: 24px;
+                margin-bottom: 5px;
+            }
+
+            h4 {
+                font-family:'Adelle_Reg', serif;
+                color: $white;
+            }
+        }
+
+        &-quantity {
+            width: 100%;
+            height: 88px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0px 50px 0px 50px;
+
+        @include media('M') {
+            padding: 0px 35px 0px 35px;
+        }
+    
+        @include media('L') {
+            padding: 0px 25px 0px 25px;
+        }
+
+            &-text {
+                margin-bottom: 12px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                p {
+                    line-height: 17px;
+                }
+
+                p:last-child {
+                    color: $grey-C2;
+
+                }
+
+                &-nr {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+
+            &-counter {
+                display: flex;
+                justify-content: space-between;
+
+            }
+
+            &-square {
+                background-color: $grey-C2;
+                height: 16px;
+                width: 16px;
+            }
+
+        }
+
+
+        &-tickets {
+            background-color: $grey-F0;
+            padding: 24px 50px 0px 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+        @include media('M') {
+            padding: 24px 35px 0px 35px;
+        }
+    
+        @include media('L') {
+            padding: 24px 25px 0px 25px;
+        }
+
+            &-counter {
+                height: 48px;
+                width: 48px;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 16px;
+                border: 2px solid $black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                img {
+                    width: 16px;
+                    object-fit: cover;
+                }
+            }
+
+            .minusBtn {
+                background-image: url("../img/tickets_minus_black.svg");
+            }
+
+            .plusBtn {
+                background-image: url("../img/tickets_plus_black.svg");
+            }
+
+            p {
+                color: $black;
+            }
+        }
+    }
+}
+
+
+
+// CAMPING: all tickets for campingplace
+
+
+
+// BUTTON on bottom to buy tickets
+.buyYourTickets {
+    background-color: $grey-F0;
+    width: 100%;
+
+@include media('M') {
+    padding: 0px 24px 0px 24px;
+}
+
+@include media('L') {
+    padding: 0px 120px 0px 120px;
+}
+
+
+    &__box {
+        width: 100%;
+        border-top: 2px solid $black;
+        padding: 40px 0px 88px 0px;
+        display: flex;
+        justify-content: center;
+
+    @include media('M') {
+        padding: 40px 0px 112px 0px;
+    }}
+}

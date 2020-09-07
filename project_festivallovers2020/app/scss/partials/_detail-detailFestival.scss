@@ -1,0 +1,173 @@
+/*--  DETAIL-PAGE  --*/
+/*--  DETAIL of festival: Location, Date, Description, ...  --*/
+
+.detailsFestival {
+    padding: 60px 16px 50px 16px;
+
+@include media('M') {
+    padding: 80px 104px 70px 104px;
+}
+
+@include media('L') {
+    padding: 120px 200px 100px 200px;
+}
+
+@include media('L+') {
+    padding: 120px 524px 55px 320px;
+}
+
+    h2 {
+        margin-bottom: 36px;
+    }
+
+    &__coordinates {
+        margin-bottom: 32px;
+
+    @include media('M') {
+        display: flex;
+        align-items: center;
+    }}
+
+    &__location {
+        margin: 0px 0px 18px 0px;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 26px;
+            height: 30px;
+        }
+
+        p {
+            margin-left: 12px;
+        }
+
+    @include media('M') {
+        margin: 0px 40px 0px 0px;
+    }}
+
+    &__date {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 26px;
+        }
+
+        p {
+            margin-left: 12px;
+        }
+    }
+
+    .lead {
+        width: auto;
+        margin-bottom: 46px;
+    }
+
+    &__content {
+        position: relative;
+
+        &-activity {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        @include media('L+') {
+            width: 200px;
+            position: absolute;
+            top: 0px;
+            right: -300px;
+            margin-top: 0px;
+            align-items: flex-start;
+        }}
+
+        &-vote {
+            .filtered-items__vote-note {
+                margin-bottom: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                
+                &-text {
+                    display: block;
+                    pointer-events: none;
+                    margin: 0px 0px 0px 9px;
+                    font-family:'ProximaNova_Bold', Arial, sans-serif;
+                    line-height: 17px;
+                    color: $black;
+                }
+
+                &--active {
+        
+                    &-icon {
+                        content: url(../img/detail_merken_filled.svg);
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+
+        &-btnBuyTickets {
+            margin-bottom: 16px;
+            padding: 0px;
+
+        @include media('L+') {
+            width: 100%;
+
+            button {
+                padding: 0px 31px 0px 31px;
+            }
+        }}
+
+        &-btnShareFestival {
+            padding: 0px;
+            margin-bottom: 56px;
+
+        @include media('L+') {
+            width: 100%;
+            
+            button {
+                padding: 0px 30px 0px 30px;
+            }
+        }}
+
+        &-advert {
+            height: 152px;
+            width: 200px;
+            border: 2px solid $grey-C2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-family:'ProximaNova_Bold', Arial, sans-serif;
+                font-size: 13px;
+                color: $grey-C2;
+                margin-bottom: 10px;
+            }
+
+            img {
+                width: 150px;
+            }
+
+        @include media('M') {
+            width: 100%;
+
+            img {
+                width: 180px;
+            }
+        }
+
+        @include media('L+') {
+
+            img {
+                width: 150px;
+            }
+        }}
+    }
+}

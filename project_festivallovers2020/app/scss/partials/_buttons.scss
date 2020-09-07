@@ -1,0 +1,75 @@
+button,
+a {
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.mainBtn {
+    height: 48px;
+    width: 100%;
+    padding: 0px 16px 0px 16px;
+
+@include media('M') {
+    width: auto;
+    padding: 0px 32px 0px 32px;
+}
+
+@include media('L') {
+    padding: 0px 120px 0px 120px;
+}
+
+    button {
+        cursor: pointer;
+        background-color: $black;
+        appearance: none;
+        height: 100%;
+        width: 100%;
+        border-style: none;
+        font-family:'ProximaNova_Bold', Arial, sans-serif;
+        color: $white;
+
+    @include media('M') {
+        width: auto;
+        padding: 0px 32px 0px 32px;
+    }}
+
+    button:hover{
+        background-color: $grey-76;
+    }
+}
+ 
+
+.moreBtn {
+    height: 48px;
+    width: 100%;
+    padding: 0px 16px 0px 16px;
+
+@include media('M') {
+    width: auto;
+    padding: 0px 32px 0px 32px;
+}
+
+    button {
+        cursor: pointer;
+        background-color: $white;
+        height: 100%;
+        width: 100%;
+        appearance: none;
+        border-style: none;
+        border: 2px solid $black;
+        font-family:'ProximaNova_Bold', Arial, sans-serif;
+        color: $black;
+
+    @include media('M') {
+        width: auto;
+        padding: 0px 32px 0px 32px;
+    }}
+
+    button:hover{
+        background-color: $black;
+        border: 2px solid $black;
+        color: $white;
+    }
+}

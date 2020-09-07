@@ -1,0 +1,628 @@
+/*--  Overview-page  --*/
+
+.overview {
+    padding: 0px 16px 0px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+@include media('M') {
+    padding: 0px 24px 0px 24px; 
+}
+
+@include media('L') {
+    max-width: 1600px;
+    padding: 0px 120px 0px 120px;
+}
+
+    h2 {
+        margin-top: 36px;
+        margin-bottom: 18px;
+    }
+}
+
+
+/*--  Menu-List: Date, Canton and tiles/list  --*/
+
+.music-items {
+    background-color: $grey-F0;
+    width: 100%;
+    padding: 0px 16px 0px 16px;
+
+@include media('M') {
+    padding: 0px 24px 0px 24px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+@include media('L') {
+    padding: 0px 120px 0px 120px;
+}}
+
+    &__filter {
+        width: 100%;
+    }
+
+    &__menu {
+        height: 64px;
+        display: flex;
+        justify-content: space-between;
+
+        &-date {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-right: 12px;
+            }
+
+            img {
+                width: 10px;
+                margin: 0px;
+            }
+
+        }
+
+        &-canton {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-right: 12px;
+            }
+
+            &-2 {
+                display: none;
+
+            @include media('M') {
+                display: block;
+            }}
+
+            &-1 {
+                display: block;
+
+            @include media('M') {
+                display: none;
+            }}
+
+            img {
+                width: 20px;
+                margin: 0px;
+            }
+        }
+
+        &-choice {
+            display: flex;
+            align-items: center;
+
+            &-tile {
+                cursor: pointer;
+                border-style: none;
+                appearance: none;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+
+            @include media('M') {
+                width: 102px;
+            }
+
+                &-icon {
+                    height: 16px;
+                    width: 16px;
+                    background-image: url("../img/steuerung_kacheln_black.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                p {
+                    display: none;
+
+                @include media('M') {
+                    display: block;
+                    font-family:'ProximaNova_Bold', Arial, sans-serif;
+                    margin-left: 12px;
+                    color: $black;
+                }}
+            }
+
+            // if list are active, tiles are inactive:
+            &-tile--inactive {
+
+                p {
+                    font-family:'ProximaNova_Reg', Arial, sans-serif;
+                    color: $grey-76;
+                }
+
+                .music-items__menu-choice-tile-icon {
+                    background-image: url("../img/steuerung_kacheln_grey76.svg");
+                }
+            }
+
+            &-tile:hover &-tile-icon {
+                background-image: url("../img/steuerung_kacheln_black.svg");
+            }
+        
+            &-tile:hover p {
+                color: $black;
+                font-family:'ProximaNova_Bold', Arial, sans-serif;
+            }
+
+            &-list {
+                cursor: pointer;
+                border-style: none;
+                appearance: none;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                margin-left: 32px;
+
+                p {
+                    color: $grey-76;
+                }
+
+            @include media('M') {
+                margin-left: 24px;
+                width: 81px;
+            }
+
+                &-icon {
+                    height: 16px;
+                    width: 22.25px;
+                    background-image: url("../img/steuerung_liste_grey76.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                p {
+                    display: none;
+    
+                @include media('M') {
+                    display: block;
+                    margin-left: 12px;
+                }}
+            }
+
+            // if list are active, tiles are inactive:
+            &-list--active {
+
+                p {
+                    color: $black;
+                    font-family:'ProximaNova_Bold', Arial, sans-serif;
+                }
+
+                .music-items__menu-choice-list-icon {
+                    background-image: url("../img/steuerung_liste_black.svg");
+                }
+            }
+
+            &-list:hover &-list-icon {
+                background-image: url("../img/steuerung_liste_black.svg");
+            }
+        
+            &-list:hover p {
+                color: $black;
+                font-family:'ProximaNova_Bold', Arial, sans-serif;
+            }
+        }
+    }
+}
+
+
+/*--  Grid for tiles  --*/
+
+.filtered-items {
+
+    &__tile-list {
+        display: grid;
+        grid-gap: 16px; // Gap between rows and columns
+        grid-template-columns: repeat(1, 1fr);
+
+    @include media('M') {
+        grid-gap: 24px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('L') {
+        grid-template-columns: repeat(3, 1fr);
+    }}
+
+    &__brick {
+        position: relative;
+        background-color: $white;
+        display: grid;
+        grid-template-columns: 1fr 15%;
+        grid-template-rows: 232px 1fr;
+        grid-template-areas:
+            "image image"
+            "text like";
+        
+        a {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: 1;
+        }
+
+    @include media('M') {
+        grid-template-columns: 1fr;
+        grid-template-rows: 232px auto auto;
+        grid-template-areas:
+            "image"
+            "text"
+            "like";
+    }}
+
+    // Picture and Icon
+
+    &__content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        grid-area: image;
+
+        &-image {
+            height: 232px;
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-icon {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 0px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+        }
+    }
+
+    // Title, Location and Date
+
+    &__text {
+        padding: 30px 0px 24px 24px;
+        grid-area: text;
+
+
+    @include media('M') {
+        padding: 30px 24px 0px 24px;
+    }
+
+        &-all {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+
+            p {
+                font-size: 13px;
+                line-height: 13px;
+            }
+        }
+
+        &-title {
+
+        @include media('M') {
+            margin-bottom: 10px;
+        }}
+
+        &-description {
+            display: none;
+
+        @include media('M') {
+            display: block;
+        }}
+    }
+
+
+    // Voting: Star on/off
+
+    &__vote {
+        grid-area: like;
+        padding: 0px 24px 30px 0px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+    @include media('M') {
+        margin-top: 100px;
+        padding: 0px 24px 24px 24px;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+        &-note {
+            cursor: pointer;
+            z-index: 2;
+
+        @include media('M') {
+            display: flex;
+            align-items: center;
+        }
+        
+            &-icon {
+                pointer-events: none;
+                content: url(../img/detail_merken_black.svg);
+                height: 20px;
+                width: 20px;
+                margin-bottom: 5px;
+            }
+
+            &-icon--active {
+                content: url(../img/detail_merken_filled_black.svg);
+                height: 20px;
+                width: 20px;
+            }
+
+            &-text {
+                display: none;
+
+            @include media('M') {
+                display: block;
+                pointer-events: none;
+                margin: 0px 0px 0px 9px;
+                font-family:'ProximaNova_Bold', Arial, sans-serif;
+                line-height: 17px;
+                color: $black;
+            }}
+        }
+    }
+}
+
+
+/*--  Grid for list  --*/
+
+.filtered-items-list {
+
+    & .filtered-items {
+
+        &__tile-list {
+
+        @include media('M') {
+            grid-gap: 16px; // Gap between rows and columns
+            grid-template-columns: 1fr;
+        }}
+
+        &__brick {
+            grid-template-rows: 48px 1fr;
+
+        @include media('M') {
+            height: 104px;
+            border-bottom: none;
+            grid-template-rows: 1fr;
+            grid-template-columns: 104px 1fr 104px;
+            grid-template-areas: "image text like";
+        }
+    
+        @include media('L+') {
+            grid-template-columns: 104px 1fr 153px;
+            grid-template-areas: "image text like";
+        }
+
+        @include media('L++') {
+            grid-template-columns: 274px 1fr 153px;
+            grid-template-areas: "image text like";
+        }}
+
+
+        // Picture and Icon
+
+        &__content {
+            height: 48px;
+    
+            &-image {
+                display: none;
+                
+            img {
+                object-fit: cover;
+            }
+    
+            @include media('L++') {
+                display: flex;
+                grid-area: img;
+                height: 104px;
+                width: 170px;
+                overflow: hidden;
+            }}
+
+            &-icon {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                background-size: 30px;
+
+            @include media('M') {
+                grid-area: icon;
+                height: 104px;
+                background-size: 50%;
+            }}
+        }
+
+        &__link {
+
+        @include media('M') {
+            height: 104px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        @include media('L++') {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 170px 104px ;
+            grid-template-areas: "img icon";
+        }}
+
+
+        // Title, Location and Date
+
+        &__text {
+            grid-area: text;
+            display: flex;
+            flex-direction: column;
+
+        @include media('M') {
+            height: 104px;
+            padding: 0px;
+            margin: 0px;
+            flex-direction: row;
+            align-items: center;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 270px;
+            grid-template-areas: "title coordinate";
+        }
+
+        @include media('L++') {
+            grid-template-columns: 1fr 390px;
+        }
+
+            &-all {
+                margin-bottom: 0px;
+                margin-top: 0px;
+                flex-direction: column;
+
+            @include media('M') {
+                grid-area: coordinate;
+                height: 104px;
+                min-width: 260px;
+                margin-bottom: 0px;
+                padding: 0px 32px 0px 32px;
+                border-left: 1px solid $grey-E5;
+                justify-content: center;
+                
+            }
+
+            @include media('L++') {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 160px 230px;
+                grid-template-areas: "location date";
+                padding: 0px;
+            }
+    
+                p {
+                    font-size: 17px;
+                    line-height: 28px;
+                }
+            }
+
+            &-location {
+        
+            @include media('L++') {
+                grid-area: location;
+                padding: 0px 16px 0px 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }}
+
+            &-slash {
+                display: none;
+            }
+
+            &-date {
+
+            @include media('L++') {
+                grid-area: date;
+                padding: 0px;
+                border-left: 1px solid $grey-E5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }}
+    
+            &-title {
+
+            @include media('M') {
+                grid-area: title;
+                width: 100%;
+                font-size: 24px;
+                line-height: 32px;
+                padding: 0px 32px 0px 32px;
+                margin-bottom: 0px;
+            }
+        
+            @include media('L+') {
+                margin-bottom: 0px;
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+
+            @include media('L++') {
+                margin-bottom: 0px;
+            }}
+
+            &-description {
+                display: none;
+            }
+        }
+
+
+        // Voting: Star on/off
+
+        &__vote {
+
+        @include media('M') {
+            height: 104px;
+            margin-top: 0px;
+            padding: 0px;
+            border-left: 1px solid $grey-E5;
+            justify-content: center;
+            align-items: center;
+        }
+
+            &-note {
+
+            @include media('M') {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            @include media('L+') {
+                flex-direction: row;
+            }
+
+                &-text {
+                    display: none;
+
+                @include media('M') {
+                    display: block;
+                    margin: 8px 0px 0px 0px;
+                    font-family:'ProximaNova_Bold', Arial, sans-serif;
+                    line-height: 17px;
+                    color: $black;
+                }
+
+                @include media('L+') {
+                    margin: 0px 0px 0px 9px;
+
+                }}
+            }
+        }
+    }
+}
+
+
+/*--  Button for more items  --*/
+
+.btnFilterIndividual {
+    margin: 48px 0px 72px 0px;
+
+@include media('M') {
+    margin: 80px 0px 80px 0px;
+}}

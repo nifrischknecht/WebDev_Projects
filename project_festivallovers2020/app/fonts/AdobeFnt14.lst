@@ -1,0 +1,102 @@
+%!Adobe-FontList 1.14
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Adelle-Bold
+FamilyName:Adelle
+StyleName:Bold
+MenuName:Adelle Rg
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Adelle Bold
+WritingScript:Roman
+OutlineFileName:\Adelle_Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:174764
+FileModTime:1455107975
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Adelle-Regular
+FamilyName:Adelle
+StyleName:Regular
+MenuName:Adelle Rg
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Adelle Regular
+WritingScript:Roman
+OutlineFileName:\Adelle_Reg.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:176380
+FileModTime:1455107975
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ProximaNova-Bold
+FamilyName:Proxima Nova
+StyleName:Bold
+MenuName:Proxima Nova Rg
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Proxima Nova Bold
+WritingScript:Roman
+OutlineFileName:\ProximaNova-Bold.ttf
+DataFormat:sfntData
+FileLength:182932
+FileModTime:1445210889
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ProximaNova-Light
+FamilyName:Proxima Nova
+StyleName:Light
+MenuName:Proxima Nova Lt
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Proxima Nova Light
+WritingScript:Roman
+OutlineFileName:\ProximaNova-Light.ttf
+DataFormat:sfntData
+FileLength:235360
+FileModTime:1445210891
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:ProximaNova-Regular
+FamilyName:Proxima Nova
+StyleName:Regular
+MenuName:Proxima Nova Rg
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Proxima Nova Regular
+WritingScript:Roman
+OutlineFileName:\ProximaNova-Reg.ttf
+DataFormat:sfntData
+FileLength:212856
+FileModTime:1445210892
+%EndFont
+

@@ -1,0 +1,177 @@
+/*--  News: main-page  --*/
+
+.newsAll {
+    height: 100vh;
+    padding: 0px 16px 0px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+@include media('M') {
+    padding: 0px 24px 0px 24px;
+}
+
+@include media('L') {
+    padding: 0px 120px 0px 120px;
+}
+
+
+    h2 {
+        margin-top: 36px;
+        margin-bottom: 18px;
+    }
+}
+
+
+/*--  NEWS: first page--*/
+
+
+.news {
+    background-color: $grey-F0;
+    margin-top: 105px;
+    padding: 75px  0px 72px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+@include media('M') {
+    margin-top: 0px;
+    padding: 100px  0px 100px 0px;
+}
+
+@include media('L') {
+    padding: 115px  0px 125px 0px;
+}
+
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+
+    @include media('M') {
+        margin-bottom: 100px;
+    }
+
+    @include media('L') {
+        margin-bottom: 125px;
+    }}
+
+
+    // Masonry (Grid-Layout): [S -> 1 row] [M -> 3 row] [L/XL -> 5 row]
+
+    &__masonry {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 48px;
+        padding: 0px 16px 0px 16px;
+        display: grid;
+        grid-gap: 16px; // Gap between rows and columns
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 0;
+    
+    @include media('M') {
+        margin-bottom: 45px;
+        padding: 0px 24px 0px 24px;
+        grid-gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media('L') {
+        padding: 0px 120px 0px 120px;
+        grid-template-columns: repeat(5, 1fr);
+    }}
+
+
+    // Brick: individual bricks and content are designed here:
+
+    &__brick {
+        background-color: $white;
+    }
+
+    &__content {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        max-width: 100%;
+        height: 232px;
+        object-fit: cover;
+    }
+
+    &__text {
+        padding: 24px 24px 24px 24px;
+
+        &-date {
+            margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 13px;
+        }
+
+        &-description {
+            padding-bottom: 25px;
+            border-bottom: 1px solid $grey-E5;
+        }
+
+        &-likes {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        &-icon {
+            cursor: pointer;
+            content: url(../img/index-news_like_black.svg);
+            width: 16px;
+            margin-right: 9px;
+        }
+
+        &-icon--active {
+            cursor: pointer;
+            content: url(../img/index-news_like_filled_black.svg);
+            width: 16px;
+            margin-right: 9px;
+        }
+
+        &-counter {
+            width: 16px;
+            padding-top: 2px;
+        }
+    }
+
+    &__brick6 {
+        display: none;
+
+    @include media('M') {
+        display: block;
+    }}
+
+    &__brick7 {
+        display: none;
+
+    @include media('M') {
+        display: block;
+    }}
+
+    &__brick8 {
+        display: none;
+
+    @include media('M') {
+        display: block;
+    }}
+
+    &__brick9 {
+        display: none;
+
+    @include media('M') {
+        display: block;
+    }}
+
+    &__brick10 {
+        display: none;
+
+    @include media('M') {
+        display: block;
+    }}
+}

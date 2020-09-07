@@ -1,0 +1,426 @@
+/*--  Boxes arround filter  --*/
+
+.filterOverlay-outside {
+    display: none;
+
+    &--active {
+        display: block;
+
+    @include media('M') {
+        display: none;
+    }
+    }
+}
+
+.filterOverlay-inside {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 300;
+}
+
+
+/*--  header of filter for mobile  --*/
+
+.headerFilter {
+    background-color: $white;  //desktop2
+    width: 100%;
+    border-top: 1px solid $grey-C2;
+    border-bottom: 1px solid $grey-C2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    z-index: 200;
+}
+
+.boxFilter {
+    height: 64px;
+    width: 100%;
+    padding-left: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+// Menü > Hamburger: to open the menu overlay
+
+.menuFilter {
+
+    &__hamburger{
+    height: 64px;
+    cursor: pointer;
+    border-style: none;
+    background-color: transparent;
+    appearance: none;
+    display: flex;
+    align-items: center;
+    }
+
+    &__icon {
+        pointer-events: none;
+        height: 64px;
+        width: 24px;
+        background-image: url("../img/navigation_menu-back_black.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24px;
+    }
+
+    p {
+        pointer-events: none;
+        font-family:'ProximaNova_Bold', Arial, sans-serif;
+        font-size: 17px;
+        color: $black;
+        padding-left: 12px;
+    }
+
+    &__hamburger:hover &__icon {
+        background-image: url("../img/navigation_menu-back_greyC2.svg");
+    }
+
+    &__hamburger:hover p {
+        color: $grey-C2;
+    }
+}
+
+// Logo FestivalLovers
+
+.logoFilter {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        background-image: url("../img/festivallovers-heart_black.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        width: 27px;
+        height: 27px;
+
+    @include media('M') {
+        background-image: url("../img/festivallovers_black.svg");
+        width: 184.8px;
+        height: 27px;
+    }}
+}
+
+
+// Login- and Ticket-Button
+
+.actionsFilter {
+    display: flex;
+    justify-content: flex-end;
+
+    &__btn {
+        height: 64px;
+        width: 64px;
+        border-style: none;
+        background-color: transparent;
+        appearance: none;
+        border-left: 1px solid $grey-C2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            display: none;
+    
+        @include media('L') {
+            display: block;
+            pointer-events: none;
+            font-family:'ProximaNova_Bold', Arial, sans-serif;
+            color: $grey-C2;
+            padding-left: 12px;
+        }
+    }
+
+    @include media('L') {
+        width: auto;
+        padding-right: 32px;
+        padding-left: 32px;
+
+        &:hover p{
+            color: $black;
+        }
+    }}
+
+    &__icon {
+        pointer-events: none;
+        height: 64px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+
+    @include media('L') {
+            padding-right: 0px;
+    }}
+
+    &__login {
+        cursor: pointer;
+
+        &-icon {
+            background-image: url("../img/navigation_login_greyC2.svg");
+        }
+
+        &--active {
+
+            .actionsFilter__login-icon {
+            background-image: url("../img/navigation_login_black.svg");
+            }
+
+            p {
+            color: $black;
+            }
+        }
+    }
+
+    &__tickets {
+
+        &-icon {
+            background-image: url("../img/navigation_tickets_greyC2.svg");
+        }
+    }
+
+    &__btn:hover {
+        background: $grey-C2;
+    }
+
+    &__btn:hover &__login-icon {
+        background-image: url("../img/navigation_login_black.svg");
+    }
+
+    &__btn:hover &__tickets-icon {
+        background-image: url("../img/navigation_tickets_black.svg");
+    }
+}
+
+
+/*--  Wrapper for filter  --*/
+
+.wrapperFilter {
+    width: 100%;
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+
+    @include media('L') {
+        max-width: 1600px;
+    }
+
+    @include media('XL') {
+        border-left: 1px solid $grey-C2;
+        border-right: 1px solid $grey-C2;
+    }
+}
+
+
+/*--  filter for music  --*/
+
+.musicFilter {
+    width:100%;
+}
+
+.genres {
+    margin: 0px;
+    padding: 0px;
+
+    &__styles {
+        background-color: $white;
+        width: 100%;
+        height: calc(100% - 160px - 64px);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+        overflow-y: scroll;
+        margin: 64px 0px 0px 0px;
+        padding: 0px 0px 24px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    @include media('M') {
+        background-color: transparent;
+        overflow: auto;
+        position: relative;
+        width: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 0px 0px 0px; 
+        margin: 0px;
+    }}
+
+    &__item {
+        background-color: $grey-C2;
+        height: 48px;
+        position: relative;
+        margin-top: 24px;
+        padding: 12px 16px 12px 12px;
+        cursor: pointer;
+        border-style: none;
+        appearance: none;
+        color: $white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+
+        img {
+            width: 25px;
+        }
+
+        p {
+            padding-left: 24px;
+
+            sup {
+                font-family:'ProximaNova_Bold', Arial, sans-serif;
+            }
+        }
+
+    @include media('M') {
+        margin: 0px 12px 24px 12px;
+    }}
+
+    &__country {
+
+    @include media('L+') {
+        display: none;
+    }}
+
+    &__blues {
+
+    @include media('L') {
+        display: none;
+    }}
+
+    &__reggae {
+
+    @include media('M') {
+        display: none;
+    }}
+
+    &__punk {
+
+    @include media('M') {
+        display: none;
+    }}
+
+    // Button: Mehr Genres
+    
+    &__btnMore {
+        display: none;
+
+    @include media('M') {
+        min-width: 100px;
+        height: 100%;
+        margin: 0px 12px 24px 12px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+        button {
+            cursor: pointer;
+            margin: 0px;
+            padding: 0px;
+            border-style: none;
+            background-color: transparent;
+            border-bottom: 1px solid $black;
+        }
+    }
+
+
+// Buttons in the foreground at the bottom
+
+    &__btn {
+        width: 100%;
+        height: 160px;
+        background-color: $white;
+        border-top: 1px solid $grey-C2;
+        padding: 24px 16px 24px 16px;
+        margin: 0px;
+        position: fixed;
+        bottom: 0;
+        z-index: 100;
+
+    @include media('M') {
+        height: auto;
+        position: relative;
+        margin-top: 10px;
+        border-top: none;
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+        z-index: 0;
+    }
+
+        &-result {
+            height: 48px;
+            width: 100%;
+            margin-bottom: 16px;
+    
+        @include media('M') {
+            width: auto;
+            margin-left: 16px;
+            margin-bottom: 0px;
+            order: 2;
+        }
+
+            button {
+                background-color: $black;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                padding: 0px 16px 0px 16px;
+                border-style: none;
+                font-family:'ProximaNova_Bold', Arial, sans-serif;
+                color: $white;
+            }
+
+            button:hover {
+                background-color: $grey-76;
+                border: none;
+                color: $white;
+            }
+        }
+
+        &-filter {
+            height: 48px;
+            width: 100%;
+    
+        @include media('M') {
+            width: auto;
+            order: 1;
+        }
+
+            button {
+                background-color: $white;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                padding: 0px 16px 0px 16px;
+                border-style: none;
+                border: 2px solid $black;
+                font-family:'ProximaNova_Bold', Arial, sans-serif;
+                color: $black;
+            }
+
+            button:hover {
+                background-color: $black;
+                border: 2px solid $black;
+                color: $white;
+            }
+        }
+    }
+}
+

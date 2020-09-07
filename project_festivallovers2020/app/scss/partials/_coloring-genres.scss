@@ -1,0 +1,809 @@
+/*--  Coloring the different music-genres  --*/
+
+
+
+/*--  VARIOUS COLORING  --*/
+
+// (for example: tiles, backgrounds, border, hovers, ....)
+
+.coloring {
+
+// JAZZ
+
+    &__jazz {
+
+        &-brick {
+            border-bottom: 4px solid $jazz-dark;
+        }
+
+        &-icon {
+            background-color: $jazz-dark;
+            background-image: url("../img/music_jazz_white.svg");
+        }
+
+        &-background {
+            background-color: $jazz-dark;
+
+            &-light {
+                background-color: $jazz-light;
+            }
+        }
+
+        &-text {
+            color: $jazz-dark;
+        }
+
+        &-counterBox {
+            border-bottom: 1px solid $jazz-dark;
+
+        @include media('M') {
+            border-bottom: none;
+            border-right: 1px solid $jazz-dark;
+        }}
+
+        &-buyTickets {
+            background-image: url("../img/music_jazz_jazzlight.svg");
+        }
+    }
+
+    &__jazz:hover {
+        background-color: $jazz-dark;
+    }
+
+    &__jazz-text {
+
+        &:hover {
+            color: $jazz-dark;
+        }
+    }
+
+
+// HIP HOP
+
+    &__hiphop {
+
+        &-brick {
+            border-bottom: 4px solid $hiphop-dark;
+        }
+
+        &-icon {
+            background-color: $hiphop-dark;
+            background-image: url("../img/music_hiphop_white.svg");
+        }
+
+        &-background {
+            background-color: $hiphop-dark;
+
+            &-light {
+                background-color: $hiphop-light;
+            }
+        }
+
+        &-text {
+            color: $hiphop-dark;
+        }
+
+        &-counterBox {
+            border-bottom: 1px solid $hiphop-dark;
+
+        @include media('M') {
+            border-bottom: none;
+            border-right: 1px solid $hiphop-dark;
+        }}
+
+        &-buyTickets {
+            background-image: url("../img/music_hiphop_hiphoplight.svg");
+        }
+    }
+
+    &__hiphop:hover {
+        background-color: $hiphop-dark;
+    }
+
+    &__hiphop-text {
+
+        &:hover {
+            color: $hiphop-dark;
+        }
+    }
+
+
+// INDIE
+
+    &__indie {
+
+        &-brick {
+            border-bottom: 4px solid $indie-dark;
+        }
+
+        &-icon {
+            background-color: $indie-dark;
+            background-image: url("../img/music_indie_white.svg");
+        }
+
+        &-background {
+            background-color: $indie-dark;
+
+            &-light {
+                background-color: $indie-light;
+            }
+        }
+
+        &-text {
+            color: $indie-dark;
+        }
+
+        &-counterBox {
+            border-bottom: 1px solid $indie-dark;
+
+        @include media('M') {
+            border-bottom: none;
+            border-right: 1px solid $indie-dark;
+        }}
+
+        &-buyTickets {
+            background-image: url("../img/music_indie_indielight.svg");
+        }
+    }
+
+    &__indie:hover {
+        background-color: $indie-dark;
+    }
+
+    &__indie-text {
+
+        &:hover {
+            color: $indie-dark;
+        }
+    }
+
+// POP ROCK
+
+    &__poprock {
+
+        &-brick {
+            border-bottom: 4px solid $poprock-dark;
+        }
+
+        &-icon {
+            background-color: $poprock-dark;
+            background-image: url("../img/music_poprock_white.svg");
+        }
+
+        &-background {
+            background-color: $poprock-dark;
+
+            &-light {
+                background-color: $poprock-light;
+            }
+        }
+
+        &-text {
+            color: $poprock-dark;
+        }
+
+        &-counterBox {
+            border-bottom: 1px solid $poprock-dark;
+
+        @include media('M') {
+            border-bottom: none;
+            border-right: 1px solid $poprock-dark;
+        }}
+
+        &-buyTickets {
+            background-image: url("../img/music_poprock_poprocklight.svg");
+        }
+    }
+
+    &__poprock:hover {
+        background-color: $poprock-dark;
+    }
+
+    &__poprock-text {
+
+        &:hover {
+            color: $poprock-dark;
+        }
+    }
+
+
+// ELECTRONIC
+
+    &__electronic {
+
+        &-brick {
+            border-bottom: 4px solid $electronic-dark;
+        }
+
+        &-icon {
+            background-color: $electronic-dark;
+            background-image: url("../img/music_electronic_white.svg");
+        }
+
+        &-background {
+            background-color: $electronic-dark;
+
+            &-light {
+                background-color: $electronic-light;
+            }
+        }
+
+        &-text {
+            color: $electronic-dark;
+        }
+
+        &-counterBox {
+            border-bottom: 1px solid $electronic-dark;
+
+        @include media('M') {
+            border-bottom: none;
+            border-right: 1px solid $electronic-dark;
+        }}
+
+        &-buyTickets {
+            background-image: url("../img/music_electronic_electroniclight.svg");
+        }
+    }
+
+    &__electronic:hover {
+        background-color: $electronic-dark;
+    }
+
+    &__electronic-text {
+
+        &:hover {
+            color: $electronic-dark;
+        }
+    }
+
+
+// COUNTRY
+
+    &__country {
+
+        &-brick {
+            border-bottom: 4px solid $country-dark;
+        }
+
+        &-icon {
+            background-color: $country-dark;
+            background-image: url("../img/music_country_white.svg");
+        }
+
+        &-background {
+            background-color: $country-dark;
+
+            &-light {
+                background-color: $country-light;
+            }
+        }
+
+        &-text {
+            color: $country-dark;
+        }
+
+        &-counterBox {
+            border-bottom: 1px solid $country-dark;
+
+        @include media('M') {
+            border-bottom: none;
+            border-right: 1px solid $country-dark;
+        }}
+
+        &-buyTickets {
+            background-image: url("../img/music_country_countrylight.svg");
+        }
+    }
+
+    &__country:hover {
+        background-color: $country-dark;
+    }
+
+    &__country-text {
+
+        &:hover {
+            color: $country-dark;
+        }
+    }
+
+
+// BLUES
+
+    &__blues {
+
+        &-brick {
+            border-bottom: 4px solid $blues-dark;
+        }
+
+        &-icon {
+            background-color: $blues-dark;
+            background-image: url("../img/music_blues_white.svg");
+        }
+
+        &-background {
+            background-color: $blues-dark;
+
+            &-light {
+                background-color: $blues-light;
+            }
+        }
+
+        &-text {
+            color: $blues-dark;
+        }
+
+        &-counterBox {
+            border-bottom: 1px solid $blues-dark;
+
+        @include media('M') {
+            border-bottom: none;
+            border-right: 1px solid $blues-dark;
+        }}
+
+        &-buyTickets {
+            background-image: url("../img/music_blues_blueslight.svg");
+        }
+    }
+ 
+    &__blues:hover {
+        background-color: $blues-dark;
+    }
+
+    &__blues-text {
+
+        &:hover {
+            color: $blues-dark;
+        }
+    }
+
+
+// REGGAE
+
+    &__reggae {
+
+        &-brick {
+            border-bottom: 4px solid $reggae-dark;
+        }
+
+        &-icon {
+            background-color: $reggae-dark;
+            background-image: url("../img/music_reggae_white.svg");
+        }
+
+        &-background {
+            background-color: $reggae-dark;
+
+            &-light {
+                background-color: $reggae-light;
+            }
+        }
+
+        &-text {
+            color: $reggae-dark;
+        }
+
+        &-counterBox {
+            border-bottom: 1px solid $reggae-dark;
+
+        @include media('M') {
+            border-bottom: none;
+            border-right: 1px solid $reggae-dark;
+        }}
+
+        &-buyTickets {
+            background-image: url("../img/music_reggae_reggaelight.svg");
+        }
+    }
+
+    &__reggae:hover {
+        background-color: $reggae-dark;
+    }
+
+    &__reggae-text {
+
+        &:hover {
+            color: $reggae-dark;
+        }
+    }
+
+
+// PUNK
+
+    &__punk {
+
+        &-brick {
+            border-bottom: 4px solid $punk-dark;
+        }
+
+        &-icon {
+            background-color: $punk-dark;
+            background-image: url("../img/music_punk_white.svg");
+        }
+
+        &-background {
+            background-color: $punk-dark;
+
+            &-light {
+                background-color: $punk-light;
+            }
+        }
+
+        &-text {
+            color: $punk-dark;
+        }
+
+        &-counterBox {
+            border-bottom: 1px solid $punk-dark;
+
+        @include media('M') {
+            border-bottom: none;
+            border-right: 1px solid $punk-dark;
+        }}
+
+        &-buyTickets {
+            background-image: url("../img/music_punk_punklight.svg");
+        }
+    }
+
+    &__punk:hover {
+        background-color: $punk-dark;
+    }
+
+    &__punk-text {
+
+        &:hover {
+            color: $punk-dark;
+        }
+    }
+}
+
+
+
+/*--  OVERVIEW-Page  --*/
+
+// List (all genres)
+.filtered-items-list {
+    
+    .coloring {
+
+    @include media('M') {
+
+        &__jazz {
+            border-right: 4px solid $jazz-dark;
+        }
+
+        &__hiphop {
+            border-right: 4px solid $hiphop-dark;
+        }
+
+        &__indie {
+            border-right: 4px solid $indie-dark;
+        }
+
+        &__poprock {
+            border-right: 4px solid $poprock-dark;
+        }
+
+        &__electronic {
+            border-right: 4px solid $electronic-dark;
+        }
+
+        &__country {
+            border-right: 4px solid $country-dark;
+        }
+
+        &__blues {
+            border-right: 4px solid $blues-dark;
+        }
+
+        &__reggae {
+            border-right: 4px solid $reggae-dark;
+        }
+
+        &__punk {
+            border-right: 4px solid $punk-dark;
+        }
+    }}
+}
+
+
+
+/*--  DETAIL-Page  --*/
+
+.coloring-detail {
+
+    &__jazz {
+        border-right: 4px solid $jazz-dark;
+    }
+
+    &__hiphop {
+        border-right: 4px solid $hiphop-dark;
+    }
+
+    &__indie {
+        border-right: 4px solid $indie-dark;
+    }
+
+    &__poprock {
+        border-right: 4px solid $poprock-dark;
+    }
+
+    &__electronic {
+        border-right: 4px solid $electronic-dark;
+    }
+
+    &__country {
+        border-right: 4px solid $country-dark;
+    }
+
+    &__blues {
+        border-right: 4px solid $blues-dark;
+    }
+
+    &__reggae {
+        border-right: 4px solid $reggae-dark;
+    }
+
+    &__punk {
+        border-right: 4px solid $punk-dark;
+    }
+}
+
+
+
+/*--  TICKETS-Page  --*/
+
+.coloring-tickets {
+
+    // JAZZ
+    &__jazz {
+
+        &-square-1day:nth-child(-n+8) {  // 1 day: dynamic
+            background-color: $jazz-dark;
+        }
+
+        &-square-3day:nth-child(-n+0) {  // 3 day: dynamic
+            background-color: $jazz-dark;
+        }
+
+        &-square-vip-1day:nth-child(-n+6) {  // VIP, 1 day: dynamic
+            background-color: $jazz-dark;
+        } 
+
+        &-square-vip-3day:nth-child(-n+10) {  // VIP, 3 day: dynamic
+            background-color: $jazz-dark;
+        }
+
+        &-square-tend-standard:nth-child(-n+6) {  // Camping: dynamic
+            background-color: $jazz-dark;
+        }
+
+        &-square-tend-vip:nth-child(-n+10) {  // Camping VIP: dynamic
+            background-color: $jazz-dark;
+        }
+    }
+
+    // HIPHOP
+    &__hiphop {
+
+        &-square-1day:nth-child(-n+8) {  // 1 day: dynamic
+            background-color: $hiphop-dark;
+        }
+
+        &-square-3day:nth-child(-n+0) {  // 3 day: dynamic
+            background-color: $hiphop-dark;
+        }
+
+        &-square-vip-1day:nth-child(-n+6) {  // VIP, 1 day: dynamic
+            background-color: $hiphop-dark;
+        } 
+
+        &-square-vip-3day:nth-child(-n+10) {  // VIP, 3 day: dynamic
+            background-color: $hiphop-dark;
+        }
+
+        &-square-tend-standard:nth-child(-n+6) {  // Camping: dynamic
+            background-color: $hiphop-dark;
+        }
+
+        &-square-tend-vip:nth-child(-n+10) {  // Camping VIP: dynamic
+            background-color: $hiphop-dark;
+        }
+    }
+
+    // INDIE
+    &__indie {
+
+        &-square-1day:nth-child(-n+8) {  // 1 day: dynamic
+            background-color: $indie-dark;
+        }
+
+        &-square-3day:nth-child(-n+0) {  // 3 day: dynamic
+            background-color: $indie-dark;
+        }
+
+        &-square-vip-1day:nth-child(-n+6) {  // VIP, 1 day: dynamic
+            background-color: $indie-dark;
+        } 
+
+        &-square-vip-3day:nth-child(-n+10) {  // VIP, 3 day: dynamic
+            background-color: $indie-dark;
+        }
+
+        &-square-tend-standard:nth-child(-n+6) {  // Camping: dynamic
+            background-color: $indie-dark;
+        }
+
+        &-square-tend-vip:nth-child(-n+10) {  // Camping VIP: dynamic
+            background-color: $indie-dark;
+        }
+    }
+
+    // POP ROCK
+    &__poprock {
+
+        &-square-1day:nth-child(-n+8) {  // 1 day: dynamic
+            background-color: $poprock-dark;
+        }
+
+        &-square-3day:nth-child(-n+0) {  // 3 day: dynamic
+            background-color: $poprock-dark;
+        }
+
+        &-square-vip-1day:nth-child(-n+6) {  // VIP, 1 day: dynamic
+            background-color: $poprock-dark;
+        } 
+
+        &-square-vip-3day:nth-child(-n+10) {  // VIP, 3 day: dynamic
+            background-color: $poprock-dark;
+        }
+
+        &-square-tend-standard:nth-child(-n+6) {  // Camping: dynamic
+            background-color: $poprock-dark;
+        }
+
+        &-square-tend-vip:nth-child(-n+10) {  // Camping VIP: dynamic
+            background-color: $poprock-dark;
+        }
+    }
+
+    // ELECTRONIC
+    &__electronic {
+
+        &-square-1day:nth-child(-n+8) {  // 1 day: dynamic
+            background-color: $electronic-dark;
+        }
+
+        &-square-3day:nth-child(-n+0) {  // 3 day: dynamic
+            background-color: $electronic-dark;
+        }
+
+        &-square-vip-1day:nth-child(-n+6) {  // VIP, 1 day: dynamic
+            background-color: $electronic-dark;
+        } 
+
+        &-square-vip-3day:nth-child(-n+10) {  // VIP, 3 day: dynamic
+            background-color: $electronic-dark;
+        }
+
+        &-square-tend-standard:nth-child(-n+6) {  // Camping: dynamic
+            background-color: $electronic-dark;
+        }
+
+        &-square-tend-vip:nth-child(-n+10) {  // Camping VIP: dynamic
+            background-color: $electronic-dark;
+        }
+    }
+
+    // COUNTRY
+    &__country {
+
+        &-square-1day:nth-child(-n+8) {  // 1 day: dynamic
+            background-color: $country-dark;
+        }
+
+        &-square-3day:nth-child(-n+0) {  // 3 day: dynamic
+            background-color: $country-dark;
+        }
+
+        &-square-vip-1day:nth-child(-n+6) {  // VIP, 1 day: dynamic
+            background-color: $country-dark;
+        } 
+
+        &-square-vip-3day:nth-child(-n+10) {  // VIP, 3 day: dynamic
+            background-color: $country-dark;
+        }
+
+        &-square-tend-standard:nth-child(-n+6) {  // Camping: dynamic
+            background-color: $country-dark;
+        }
+
+        &-square-tend-vip:nth-child(-n+10) {  // Camping VIP: dynamic
+            background-color: $country-dark;
+        }
+    }
+
+    // BLUES
+    &__blues {
+
+        &-square-1day:nth-child(-n+8) {  // 1 day: dynamic
+            background-color: $blues-dark;
+        }
+
+        &-square-3day:nth-child(-n+0) {  // 3 day: dynamic
+            background-color: $blues-dark;
+        }
+
+        &-square-vip-1day:nth-child(-n+6) {  // VIP, 1 day: dynamic
+            background-color: $blues-dark;
+        } 
+
+        &-square-vip-3day:nth-child(-n+10) {  // VIP, 3 day: dynamic
+            background-color: $blues-dark;
+        }
+
+        &-square-tend-standard:nth-child(-n+6) {  // Camping: dynamic
+            background-color: $blues-dark;
+        }
+
+        &-square-tend-vip:nth-child(-n+10) {  // Camping VIP: dynamic
+            background-color: $blues-dark;
+        }
+    }
+
+    // REAGGAE
+    &__reggae {
+
+        &-square-1day:nth-child(-n+8) {  // 1 day: dynamic
+            background-color: $reggae-dark;
+        }
+
+        &-square-3day:nth-child(-n+0) {  // 3 day: dynamic
+            background-color: $reggae-dark;
+        }
+
+        &-square-vip-1day:nth-child(-n+6) {  // VIP, 1 day: dynamic
+            background-color: $reggae-dark;
+        } 
+
+        &-square-vip-3day:nth-child(-n+10) {  // VIP, 3 day: dynamic
+            background-color: $reggae-dark;
+        }
+
+        &-square-tend-standard:nth-child(-n+6) {  // Camping: dynamic
+            background-color: $reggae-dark;
+        }
+
+        &-square-tend-vip:nth-child(-n+10) {  // Camping VIP: dynamic
+            background-color: $reggae-dark;
+        }
+    }
+
+    // PUNK
+    &__punk {
+
+        &-square-1day:nth-child(-n+8) {  // 1 day: dynamic
+            background-color: $punk-dark;
+        }
+
+        &-square-3day:nth-child(-n+0) {  // 3 day: dynamic
+            background-color: $punk-dark;
+        }
+
+        &-square-vip-1day:nth-child(-n+6) {  // VIP, 1 day: dynamic
+            background-color: $punk-dark;
+        } 
+
+        &-square-vip-3day:nth-child(-n+10) {  // VIP, 3 day: dynamic
+            background-color: $punk-dark;
+        }
+
+        &-square-tend-standard:nth-child(-n+6) {  // Camping: dynamic
+            background-color: $punk-dark;
+        }
+
+        &-square-tend-vip:nth-child(-n+10) {  // Camping VIP: dynamic
+            background-color: $punk-dark;
+        }
+    }
+}

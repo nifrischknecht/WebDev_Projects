@@ -1,0 +1,195 @@
+header {
+    background-color: $white;  //desktop2
+    width: 100%;
+    border-top: 1px solid $grey-C2;
+    border-bottom: 1px solid $grey-C2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    z-index: 200;
+}
+
+.box {
+    height: 64px;
+    width: 100%;
+    padding-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    
+@include media('M') {
+    padding-left: 24px;
+}
+
+@include media('L') {
+    max-width: 1600px;
+    padding-left: 32px;
+}}
+
+// Menü > Hamburger: to open the menu overlay
+
+.menu {
+
+    &__hamburger{
+    height: 64px;
+    cursor: pointer;
+    border-style: none;
+    appearance: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    }
+
+    &__icon {
+        pointer-events: none;
+        height: 64px;
+        width: 24px;
+        background-image: url("../img/navigation_menu_black.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24px;
+    }
+
+    p {
+        pointer-events: none;
+        font-family:'ProximaNova_Bold', Arial, sans-serif;
+        font-size: 17px;
+        color: $black;
+        padding-left: 12px;
+    }
+
+    &__hamburger:hover &__icon {
+        background-image: url("../img/navigation_menu_greyC2.svg");
+    }
+
+    &__hamburger:hover p {
+        color: $grey-C2;
+    }
+}
+
+
+// Logo FestivalLovers
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        background-image: url("../img/festivallovers-heart_black.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        width: 27px;
+        height: 27px;
+
+    @include media('M') {
+        background-image: url("../img/festivallovers_black.svg");
+        width: 184.8px;
+        height: 27px;
+    }}
+}
+
+
+// Login- and Ticket-Button
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+
+    &__btn {
+        height: 64px;
+        width: 64px;
+        border-style: none;
+        background-color: transparent;
+        appearance: none;
+        border-left: 1px solid $grey-C2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            display: none;
+    
+        @include media('L') {
+            display: block;
+            pointer-events: none;
+            font-family:'ProximaNova_Bold', Arial, sans-serif;
+            color: $grey-C2;
+            padding-left: 12px;
+        }
+    }
+
+    @include media('L') {
+        width: auto;
+        padding-right: 32px;
+        padding-left: 32px;
+
+        &:hover p{
+            color: $black;
+        }
+    }}
+
+    &__icon {
+        pointer-events: none;
+        height: 64px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 32px;
+        padding-left: 32px;
+        padding-right: 32px;
+
+    @include media('L') {
+        padding-right: 0px;
+    }}
+
+    &__login {
+        cursor: pointer;
+
+        &-icon {
+            background-image: url("../img/navigation_login_greyC2.svg");
+        }
+
+        &--active {
+
+            .actions__login-icon {
+            background-image: url("../img/navigation_login_black.svg");
+            }
+
+            p {
+            color: $black;
+            }
+        }
+    }
+
+    &__tickets {
+
+        &-icon {
+            background-image: url("../img/navigation_tickets_greyC2.svg");
+        }
+
+        &--active {
+
+            .actions__tickets-icon {
+            background-image: url("../img/navigation_tickets_black.svg");
+            }
+
+            p {
+            color: $black;
+            }
+        }
+    }
+
+    &__btn:hover {
+        background: $grey-C2;
+    }
+
+    &__btn:hover &__login-icon {
+        background-image: url("../img/navigation_login_black.svg");
+    }
+
+    &__btn:hover &__tickets-icon {
+        background-image: url("../img/navigation_tickets_black.svg");
+    }
+}

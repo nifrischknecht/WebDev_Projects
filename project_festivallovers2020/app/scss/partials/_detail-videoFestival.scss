@@ -1,0 +1,78 @@
+/*--  DETAIL-PAGE  --*/
+/*--  VIDEO: Emotions of festival  --*/
+
+.videoFestival {
+    height: 160px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+@include media('M') {
+    height: 250px;
+}
+
+@include media('L') {
+    height: 392px;
+    transition: height .6s ease;
+}
+
+    &__picture {
+        background-color: red;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+
+
+    @include media('M') {
+        height: 100%;
+    }
+
+    @include media('L') {
+        height: 100%;
+    }}
+
+    &__video-play {
+        width: 30px;
+        height: 40px;
+        background-color: transparent;
+        border-style: none;
+        appearance: none;
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__video-icon {
+        pointer-events: none;
+        width: 30px;
+        height: 40px;
+        background-image: url("../img/detail-video_play_white.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28px;
+    }
+
+    &__video-icon--active {
+        background-image: url("../img/detail-video_break_white.svg");
+        background-size: 26px;
+    }
+
+
+}
+
+
+.videoFestival--active {
+
+@include media('L') {
+    background-color: yellowgreen;
+    height: 784px;
+}}

@@ -1,0 +1,35 @@
+/*-- Breakpoints (different screensize):
+     (S => Smartphone), M => Tablet, X => Desktop 1, XL => Desktop 2 --*/
+
+@mixin media($media) {
+
+    @if $media == 'M' {
+        @media (min-width: 769px){   // 769-1439px
+            @content;
+        }
+    }
+
+    @if $media == 'L' {
+        @media (min-width: 1024px){   // 1024-1599px
+            @content;
+        }
+    }
+
+    @if $media == 'L+' {
+        @media (min-width: 1230px){   // 1024-1599px
+            @content;
+        }
+    }
+
+    @if $media == 'L++' {
+        @media (min-width: 1400px){   // 1024-1599px
+            @content;
+        }
+    }
+
+    @if $media == 'XL' {
+        @media (min-width: 1600px){   // from 1600px
+            @content;
+        }
+    }
+}

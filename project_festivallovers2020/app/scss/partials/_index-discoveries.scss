@@ -1,0 +1,101 @@
+/*--  Discovery  --*/
+
+.discovery {
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+@include media('M') {
+    margin-top: 125px;
+}
+
+    &__title {
+        text-align: center;
+        padding: 0px 16px 0px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            margin-bottom: 18px;
+        }
+    
+    @include media('M') {
+        padding: 0px 24px 0px 24px;
+    }
+    
+    @include media('L') {
+        padding: 0px 120px 0px 120px;
+    }}
+
+    &__audio {
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom: 48px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+
+    @include media('M') {
+        margin-top: 105px;
+        margin-bottom: 150px;
+    }}
+
+    &__audioAll {
+        width: 1690px;
+        position: relative;
+        top: 0px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__audio-play {
+        background-color: transparent;
+        width: 30px;
+        height: 40px;
+        border-style: none;
+        appearance: none;
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__audio-icon {
+        pointer-events: none;
+        width: 30px;
+        height: 40px;
+        background-image: url("../img/index-audio_play_black.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28px;
+    }
+
+    &__audio-icon--active {
+        background-image: url("../img/index-audio_break_black.svg");
+        background-size: 26px;
+    }
+}
+
+.btnDiscovery {
+    margin-top: 20px;  //50px more from margin-bottom of discovery__audioAll
+
+@include media('M') {
+margin-top: 50px;  //50px more from margin-bottom of discovery__audioAll
+}
+
+@include media('L') {
+    margin-top: 70px;  //50px more from margin-bottom of discovery__audioAll
+}}

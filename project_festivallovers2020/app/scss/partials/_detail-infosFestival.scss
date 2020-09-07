@@ -1,0 +1,100 @@
+/*--  DETAIL-PAGE  --*/
+/*--  INFOS: various, google map (in a extern file), ...  --*/
+
+.infosFestival {
+    width: 100%;
+    margin-top: 95px;
+    padding: 0px 16px 70px 16px;
+
+@include media('M') {
+    margin-top: 120px;
+    padding: 0px 104px 70px 104px;
+}
+
+@include media('L') {
+    margin-top: 144px;
+    padding: 0px 200px 70px 200px;
+}
+
+@include media('L+') {
+    padding: 0px 524px 70px 320px;
+}
+
+    h2 {
+        margin-bottom: 26px;
+
+    @include media('M') {
+        margin-bottom: 60px;
+
+    }}
+
+    .lead {
+        width: auto;
+        margin-bottom: 86px;
+    }
+
+
+    &__accordion {
+        width: 100%;
+        margin-bottom: 70px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        padding: 0px 0px 10px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 4px solid $black;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        h3 {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        &-moreBtn {
+            padding: 0px;
+            margin: 0px;
+            cursor: pointer;
+            background-color: transparent;
+            padding: 0px;
+            appearance: none;
+            border-style: none;
+            font-family:'ProximaNova_Bold', Arial, sans-serif;
+            color: $black;
+        }
+    }
+
+    &__content {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+}
+
+
+// Google Maps
+
+#map {
+    height: 232px;
+    width: 100%;
+    margin-top: 60px;
+
+@include media('M') {
+    height: 320px;
+}
+
+@include media('L') {
+    height: 392px;
+
+}}

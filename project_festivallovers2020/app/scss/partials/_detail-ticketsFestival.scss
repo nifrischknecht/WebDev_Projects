@@ -1,0 +1,151 @@
+/*--  DETAIL-PAGE  --*/
+/*--  TICKETS & otherFestivals: buying Tickets AND find an other Festivals  --*/
+
+
+.ticketsFestival {
+
+    &__buyTickets {
+        height: 376px;
+        width: 100%;
+        padding: 0px 16px 0px 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            color: $white;
+            margin-bottom: 44px;
+            text-align: center;
+        }
+
+
+        &-btn {
+            width: 100%;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+
+            a {
+                color: $white;
+                font-family:'ProximaNova_Bold', Arial, sans-serif;
+            }
+
+            button {
+                background-color: transparent;
+                border: 2px solid $white;
+                cursor: pointer;
+                color: $white;
+            }
+
+            button:hover{
+                background-color: $white;
+                border: 2px solid $white;
+            }
+
+        }
+
+    @include media('M') {
+        padding: 0px 24px 0px 24px;
+    }
+
+    @include media('L') {
+        padding: 0px 120px 0px 120px;
+    }}
+
+    &__festivals {
+        width: 100%;
+
+    @include media('M') {
+        display: flex;
+    }
+
+        &-single {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-left {
+                padding-left: 16px;
+            }
+
+            &-right {
+                padding-right: 16px;
+            }
+
+            p {
+                color: $white;
+                font-family:'ProximaNova_Bold', Arial, sans-serif;
+            }
+
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+
+        @include media('M') {
+
+            &-left {
+                padding-left: 24px;
+            }
+
+            &-right {
+                padding-right: 24px;
+            }
+        }
+
+        @include media('L') {
+
+            &-left {
+                padding-left: 120px;
+            }
+
+            &-right {
+                padding-right: 120px;
+            }
+        }}
+
+        &-image {
+            width: 128px;
+            height: 128px;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
+        @include media('L++') {
+            width: 312px;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }}
+
+        &-btn {
+            width: 30px;
+            height: 128px;
+            padding: 0px;
+
+
+            img {
+                object-fit: cover;
+                width: 24px;
+            }
+        }
+    }
+}

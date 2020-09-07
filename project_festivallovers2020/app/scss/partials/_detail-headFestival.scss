@@ -1,0 +1,135 @@
+/*--  DETAIL-PAGE  --*/
+/*--  HEAD and COUNTER of Detail-Page  --*/
+
+.headFestival {
+    min-height: 576px;
+    width: 100%;
+    position: relative;
+
+@include media('M') {
+    min-height: 1200px;
+}
+
+@include media('L') {
+    min-height: 1761px;
+}
+
+    &__image {
+
+        img {
+            width: 100%;
+            height: 336px;
+            object-fit: cover;
+
+        @include media('M') {
+            height: 700px;
+        }
+        
+        @include media('L') {
+            height: 1289px;
+        }}
+    }
+
+    &__icon {
+        background-color: transparent;
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translate(-50%);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+    @include media('M') {
+        width: 120px;
+        height: 120px;
+        top: 50px;
+    }
+
+    @include media('L') {
+        width: 210px;
+        height: 210px;
+        top: 100px;
+    }}
+
+
+    h2 {
+        margin-top: -20px;
+        padding: 0px 0px 0px 16px;
+
+    @include media('M') {
+        margin-top: -56px;
+        padding: 0px 0px 0px 24px;
+    }
+
+    @include media('L') {
+        padding: 0px 0px 0px 120px;
+    }
+
+    @include media('L+') {
+
+            margin-top: -80px;
+    }}
+}
+
+
+/*--  COUNTER: Countdwon, Tickets left, Visitors, Meteo  --*/
+
+.counterFestival {
+
+@include media('M') {
+    display: flex;   
+}
+
+    &__box {
+        height: 136px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+    @include media('M') {
+        height: 200px;
+    }
+
+    @include media('L') {
+        height: 264px;
+    }}
+
+    &__box:last-child {
+        border-bottom: none;
+        border-right: none;
+    }
+
+    &__title {
+        font-family:'ProximaNova_Bold', Arial, sans-serif;
+        font-size: 24px;
+        line-height: 32px;
+        color: $white;
+
+
+    @include media('L') {
+        font-size: 32px;
+        line-height: 40px;
+    }}
+
+    &__counter {
+        font-family:'ProximaNova_Bold', Arial, sans-serif;
+        font-size: 32px;
+        line-height: 40px;
+        color: $white;
+
+        @include media('M') {
+            font-size: 46px;
+            line-height: 64px;
+        }
+
+        @include media('L') {
+            font-size: 56px;
+            line-height: 80px;
+        }
+
+    }
+}

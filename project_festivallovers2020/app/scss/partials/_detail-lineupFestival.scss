@@ -1,0 +1,239 @@
+/*--  DETAIL-PAGE  --*/
+/*--  LINEUP FESTIVAL: Friday, Saturday, Sunday  --*/
+
+.lineupFestival {
+    background-color: $grey-F0;
+    padding: 86px 16px 90px 16px;
+
+@include media('M') {
+    padding: 114px 24px 140px 24px;
+}
+
+@include media('L') {
+    padding: 114px 120px 140px 120px;
+}
+
+@include media('L+') {
+    padding: 114px 240px 140px 240px;
+}
+
+    h2 {
+        margin-bottom: 26px;
+
+    @include media('M') {
+        margin-left: 80px;
+        margin-bottom: 60px;
+
+    }}
+
+    .lead {
+
+    @include media('M') {
+        margin-left: 80px;
+    }}
+
+
+    // start with buttons >selection a day (friday, saturday, sunday)
+    &__linupAllDay {
+        width: 100%;
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+
+    @include media('M') {
+        flex-direction: row;
+        margin-top: 80px;
+        margin-left: 80px;
+    }}
+
+
+    // STATUS: singleDay
+    &__singleDay {
+        background-color: $black;
+        height: 48px;
+        width: 100%;
+        cursor: pointer;
+        appearance: none;
+        border-style: none;
+        border-top: 1px solid $white;
+        padding: 0px 16px 0px 16px;
+        align-items: center;
+        order: 0;
+        display: none; // hide buttons on mobile (only shown active buttons)
+
+        p {
+            font-family:'ProximaNova_Bold', Arial, sans-serif;
+            color: $white;
+            pointer-events: none;
+        }
+
+    @include media('M') {
+        width: auto;
+        background-color: transparent;
+        margin-right: 16px;
+        padding: 0px 32px 0px 32px;
+        border: 2px solid $black;
+        justify-content: center;
+        display: flex; // Always show buttons on medium and larger screens
+
+        p {
+            color: $black;
+        }
+    }}
+
+    &__singleDay:hover {
+
+    @include media('M') {
+        background-color: $black;
+        position: relative;
+
+        p {
+            color: $white;
+        }
+
+        .lineupFestival__singleDay-triangle {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $black;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: 45px;
+        }
+    }}
+
+    // STATUS: singleDay active
+    &__singleDay--active {
+        justify-content: space-between;
+        border-top: none;
+        order: -2;
+        display: flex;
+        margin-top: 1px;
+
+        p {
+            font-family:'ProximaNova_Bold', Arial, sans-serif;
+            color: $white;
+        }
+
+        .lineupFestival__singleDay-icon {
+            width: 16px;
+            height: 16px;
+            background-image: url("../img/steuerung_dropdown-down_white.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+        @include media('M') {
+            display: none;
+        }}
+
+    @include media('M') {
+        background-color: $black;
+        position: relative;
+        order: 0;
+        margin-top: 0;
+
+        p {
+            color: $white;
+        }
+
+        .lineupFestival__singleDay-triangle {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $black;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            top: 45px;
+        }
+    }}
+
+    &__linupAllDay--open {
+      .lineupFestival__singleDay {
+        display: flex; // visible buttons when menu is open (only on mobile)
+      }
+
+        .lineupFestival__singleDay-icon {
+            background-image: url("../img/steuerung_dropdown-up_white.svg");
+        }
+    }
+}
+
+/*--  start with DAILY PROGRAMM: (friday, saturday, sunday)  --*/
+
+.lineupFestival {
+
+    &__dayProgramm {
+        margin-top: 55px;
+        display: none;
+
+    @include media('M') {
+        margin-top: 86px;
+    }
+
+        &--active {
+            display: block;
+        }
+
+        &-sequence {
+            margin-bottom: 32px;
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "time artist";
+
+        @include media('M') {
+            gap: 16px;
+            grid-template-columns: 64px 1fr;
+        }}
+
+        &-sequence:last-child {
+            margin-bottom: 0px;
+        }
+
+        &-time {
+            grid-area: time;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-family:'ProximaNova_Bold', Arial, sans-serif;
+                color: $black;
+            }
+        }
+
+        &-artists {
+            grid-area: artist;
+
+        @include media('M') {
+            display: flex;
+        }}
+
+        &-singleArtist {
+            background-color: $white;
+            height: 48px;
+            margin-bottom: 16px;
+            padding: 0px 16px 0px 16px;
+            display: flex;
+            align-items: center;
+
+        @include media('M') {
+            width: 289px;
+            margin-right: 16px;
+            margin-bottom: 0px;
+        }}
+
+        &-singleArtist:last-child {
+            margin-bottom: 0px;
+
+        @include media('M') {
+            margin-right: 0px;
+        }}
+    }
+}
