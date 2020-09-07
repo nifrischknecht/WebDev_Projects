@@ -1,0 +1,58 @@
+/*  Alles CSS im Bereich «Offers» zum Projekt Pricing
+    ==================================================  */
+
+    @import "partials/variables";
+    @import "partials/mixins";
+
+
+.offer-wrapper{
+    @include desktop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.offer{
+    background-color: white;
+    color: $Blue-dark;
+    width: 90%;
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    &__title{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    &__dollar{
+        font-size: 2rem;
+        margin: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__price{
+        font-size: 4rem;
+        margin: 0 0 0 0.5rem;
+    }
+
+    &__services{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__btn{
+        background-image: linear-gradient($Purple-light, $Purple-dark);
+        color: $Purple-dark;
+    }
+
+    &offer--negative{
+        background-image: linear-gradient(to bottom, $Purple-light, $Purple-dark);
+        color: white;
+    }
+}

@@ -1,0 +1,51 @@
+@import "partials/normalize";
+@import "partials/variables";
+@import "partials/mixins";
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    color: $Blue-normal;
+    background-color: $Blue-lightest;
+    background-image: url('../images/bg-top.svg');
+    background-repeat: no-repeat;
+    background-position: 15rem -3rem;
+
+    @include desktop{
+        background-image: url('../images/bg-top.svg'), url('../images/bg-bottom.svg');
+        background-position: top right, bottom left;
+    }
+}
+
+/*--  Header-Bereich  --*/
+@import "partials/header";
+
+main{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+/*--  Angebote(Offers)-Bereich  --*/
+@import "partials/offers";
+
+.attribution {
+    font-size: 11px;
+    padding-bottom: 2rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

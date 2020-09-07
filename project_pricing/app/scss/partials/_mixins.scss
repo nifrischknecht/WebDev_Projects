@@ -1,0 +1,22 @@
+/*  Alle Mixins zum Projekt Pricing
+    ===================================  */
+
+
+/*---   Screens   ---*/
+
+/* Mobile */
+
+@mixin mobile{
+  @media (min-width: 375px){
+    @content;
+  }
+}
+
+
+/* Desktop */
+
+@mixin desktop{
+  @media (min-width: 1440px){
+    @content;
+  }
+}
