@@ -1,0 +1,30 @@
+.detaillist{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        font-size: 600;
+    }
+}
+
+
+.table{
+    &__taskdetails{
+    h3{
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        color: $color6;
+    }
+
+    h4{
+        color: $color3;
+    }
+
+    p{
+        margin-top: 0.2rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+    }
+}

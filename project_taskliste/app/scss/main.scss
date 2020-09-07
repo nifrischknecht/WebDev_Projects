@@ -1,0 +1,112 @@
+@import "partials/normalize";
+@import "partials/colors";
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: $color3;
+    background-color: $color1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    background-color: $color6;
+    height: 30vh;
+    width: 100%;
+    padding-left: 25%;
+    padding-right: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main{
+    width: 100%;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: center;
+} 
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 500;
+    color: $color2;
+}
+
+h2{
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: $color2;
+}
+
+h3{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 800;
+    color: $color3;
+}
+
+h4{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $color2;
+}
+
+p{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.title {
+    &__titleline{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: flex;
+        align-items: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        height: 4rem;
+        border-radius: 8px;
+        background-color: $color6;
+    }
+}
+
+
+
+
+/*--  Taskliste  --*/
+@import "partials/tasklist";
+
+/*--  Task Details  --*/
+@import "partials/details";
+
+/*--  Neuer Task erstellen  --*/
+@import "partials/createTask";
+
+/*--  Neuer User registrieren  --*/
+@import "partials/newUser";
+
+/*--  User Login --*/
+@import "partials/login";
+
+/*--  User bearbeiten (edit)  --*/
+/*-- @import "partials/editUser"; --*/

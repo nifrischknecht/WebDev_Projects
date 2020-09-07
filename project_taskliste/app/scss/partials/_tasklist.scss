@@ -1,0 +1,80 @@
+.tasklist{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.btns{
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__createTask{
+        height: 3rem;
+        width: 16rem;
+        background-color: $color5;
+        border-radius: 8px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: $color2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__createTask:hover{
+        background-color: $color6;
+    }
+
+}
+
+
+.table {
+
+    &__taskline{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: grid;
+        grid-template-columns: 45% 25% 10% 10% 10%;
+        grid-template-rows: auto;
+        align-items: center;
+    }
+
+    &__tabletitleline{
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        height: 4rem;
+        border-radius: 8px;
+        background-color: $color6;
+    }
+
+    &__taskBtn{
+        height: 3.5rem;
+        width: 3.5rem;
+        background-color: $color6;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
+        border-radius: 8px;
+        justify-self: right;
+        }
+
+        &__taskBtn:hover{
+            background-color: $color5;
+    }
+
+    &__details{
+        background-image: url("../img/details.svg");
+    }
+
+    &__edit{
+        background-image: url("../img/edit.svg");
+    }
+
+    &__delete{
+        background-image: url("../img/delete_new.svg");
+    }
+
+    }
