@@ -129,7 +129,7 @@ function reload(cb){
 function startBrowserSync() {
   browserSync.init({
       //für sync mit localhost/MAMP
-      proxy: "http://localhost/web_developer/diplompruefung2020/festivallovers/" //korrekten link angeben!
+      proxy: "http://localhost/web_developer/projekte/project_ToDo" //korrekten link angeben!
 
               //für live:
         //server: {
