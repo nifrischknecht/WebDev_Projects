@@ -1,2 +1,0 @@
-/* Hier kommt js
-*/

@@ -31,10 +31,12 @@
         }
     }
 
+
     &__label{
         display: flex;
         justify-content: center;
         align-items: center;
+
     }
 
     &__checkmark + .list__label::before{
@@ -42,8 +44,12 @@
         width: 2.7rem;
         height: 2.7rem;
     }
+
     &__checkmark:checked + .list__label::before{
         content: url(../images/checked.svg);
+        object-fit: cover;
+        width: 60px;
+        height: 100px;
     }
 
     &__item-name{
